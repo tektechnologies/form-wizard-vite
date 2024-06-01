@@ -6,13 +6,27 @@ import Form3 from './assets/Form3';
 const Modal = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
-    field1: '',
-    field2: '',
-    field3: '',
+  firstName : '',
+  lastName :  '',
+  companyName :  '',
+  emailAddress : '',
+  phoneNumber :  '',
+  visitForeignCountry :  '',
+  visitReason :  '',
+  toolsRequired : '',
+  toolReason :  '',
+  visitDate :  '',
+  startTime :  '',
+  endTime :  '',
+  userLocation :  '',
+  productcategory :  '',
+  field2: '',
+  field3: '',
   });
 
+  
   const handleNext = (data) => {
-    console.log('handleNext formDataState', formData);
+    console.log('handleNext form Data State', formData);
     setFormData({ ...formData, ...data });
     setStep(step + 1);
   };
@@ -28,6 +42,7 @@ const Modal = () => {
     console.log("Final Data:", { ...formData, ...data });
   };
 
+  console.log('state : ',formData);
   return (
     <div className="modal">
      {/* updating state incase user back clicks  */}
