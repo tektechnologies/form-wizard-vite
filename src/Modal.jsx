@@ -20,7 +20,9 @@ const Modal = () => {
   endTime :  '',
   userLocation :  '',
   productcategory :  '',
+  //second form 
   field2: '',
+  //third form
   field3: '',
   });
 
