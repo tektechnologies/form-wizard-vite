@@ -26,10 +26,11 @@ const Modal = () => {
   field3: '',
   });
 
+ 
   
   const handleNext = (data) => {
-    console.log('handleNext form Data State', formData);
-    setFormData({ ...formData, ...data });
+    console.log('handleNext data ', data);
+    setFormData(prevFormData => ({ ...prevFormData, ...data }));
     setStep(step + 1);
   };
 
@@ -39,7 +40,7 @@ const Modal = () => {
 
   const handleFinalSubmit = (data) => {
     console.log('handleFinalSubmit', data);
-    setFormData({ ...formData, ...data });
+    setFormData(prevFormData => ({ ...prevFormData, ...data }));
     // handle final submission
     console.log("Final Data:", { ...formData, ...data });
   };
@@ -52,15 +53,15 @@ const Modal = () => {
       {step === 2 && (
         <div>
         {/* updating state incase user back clicks  */}
-          <Form2 onSubmit={handleNext} defaultValues={formData} />
-          <button onClick={handleBack}>Back</button>
+          <Form2 onSubmit={handleNext} defaultValues={formData} handleBack={handleBack} />
+          {/* <button onClick={handleBack}>Back</button> */}
         </div>
       )}
       {step === 3 && (
         <div>
         {/* manages submitting all data in state on final submit  */}
-          <Form3 onSubmit={handleFinalSubmit} defaultValues={formData} />
-          <button onClick={handleBack}>Back</button>
+          <Form3 onSubmit={handleFinalSubmit} defaultValues={formData} handleBack={handleBack} />
+          {/* <button onClick={handleBack}>Back</button> */}
         </div>
       )}
     </div>
