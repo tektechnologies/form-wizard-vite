@@ -39,7 +39,7 @@ const Modal = () => {
   };
 
   const handleFinalSubmit = (data) => {
-    console.log('handleFinalSubmit', data);
+    console.log('handle Final Submit:FINAL', data);
     setFormData(prevFormData => ({ ...prevFormData, ...data }));
     // handle final submission
     console.log("Final Data:", { ...formData, ...data });

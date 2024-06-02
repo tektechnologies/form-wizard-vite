@@ -3,10 +3,9 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 
-const Form2 = ({ onSubmit, defaultValues }) => {
-  const { register, handleSubmit, control, handleBack } = useForm({ defaultValues });
-  
-  //trying to move the handle back button into the form for layout not sure how to pass the function to the individual components and get the call back to the Modal class to update. 
+const Form2 = ({ onSubmit, defaultValues, handleBack }) => {
+  const { register, handleSubmit, control } = useForm({ defaultValues });
+ 
 
   console.log('handle back!!!!1', handleBack);
   return (
@@ -14,9 +13,12 @@ const Form2 = ({ onSubmit, defaultValues }) => {
       <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
         <input {...register("field2")} placeholder="Field 2" />
 
-        <button onClick={handleBack}>Back</button>
+      <div>
+        <button onClick={handleBack} className="back-button-50">Back</button>
 
         <button type="submit" className="next-button-50">Next</button>
+      </div>
+        
 
       </form>
       <DevTool control={control} />

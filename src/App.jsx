@@ -14,6 +14,7 @@ const App = () => {
           <button onClick={() => setIsModalOpen(false)}>Close</button>
         </div>
       )}
+
     </div>
   );
 };
