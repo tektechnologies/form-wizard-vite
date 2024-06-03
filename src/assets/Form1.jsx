@@ -1,10 +1,9 @@
 // Form1.jsx
 import React from "react";
 import { useForm } from "react-hook-form";
-import { DevTool } from "@hookform/devtools"
+import { DevTool } from "@hookform/devtools";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
-
 
 const Form1 = ({ onSubmit, defaultValues }) => {
   const { register, handleSubmit, control } = useForm({ defaultValues });
@@ -17,13 +16,21 @@ const Form1 = ({ onSubmit, defaultValues }) => {
           <form onSubmit={handleSubmit(onSubmit)} noValidate>
             <div className="label-input-group three-col">
               <label htmlFor="firstName">First Name</label>
-              <input type="text" id="firstName" {...register("firstName", 
-              { required: 'Username is required.' }
-              )} />
+              <input
+                type="text"
+                id="firstName"
+                {...register("firstName", {
+                  required: "Username is required.",
+                })}
+              />
             </div>
             <div className="label-input-group three-col">
               <label htmlFor="lastName">Last Name</label>
-              <input type="text" id="lastName" {...register("lastName", { required: 'Lastname is required.' })} />
+              <input
+                type="text"
+                id="lastName"
+                {...register("lastName", { required: "Lastname is required." })}
+              />
             </div>
 
             <div className="label-input-group three-col">
@@ -31,7 +38,9 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               <input
                 type="text"
                 id="companyName"
-                {...register("companyName",  { required: 'Company name is required.' })}
+                {...register("companyName", {
+                  required: "Company name is required.",
+                })}
               />
             </div>
             <div className="label-input-group">
@@ -39,12 +48,14 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               <input
                 type="text"
                 id="emailAddress"
+                // required: 'Email is required.',
                 {...register("emailAddress", {
                   pattern: {
-                    value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-                    message: "Invalid email format",
-                    }
-              })}
+                    value:
+                      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                    message: "Invalid Email",
+                  },
+                })}
               />
             </div>
             <div className="label-input-group">
@@ -52,7 +63,9 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               <input
                 type="text"
                 id="phoneNumber"
-                {...register("phoneNumber")}
+                {...register("phoneNumber", {
+                  required: "Phone number is required.",
+                })}
               />
             </div>
             <label htmlFor="visitForeignCountry" className="toggle">
@@ -60,7 +73,9 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               <input
                 type="checkbox"
                 id="visitForeignCountry"
-                {...register("visitForeignCountry")}
+                {...register("visitForeignCountry", {
+                  required: "Visit Foreign County is required.",
+                })}
               />
               <span className="slider position-toggle"></span>
             </label>
@@ -80,7 +95,9 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                 htmlFor="visitReason"
                 id="visitReason"
                 rows="4"
-                {...register("visitReason")}
+                {...register("visitReason", {
+                  required: "Visit Reason is required.",
+                })}
               ></textarea>
             </div>
             <hr
@@ -97,7 +114,9 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                 <input
                   type="checkbox"
                   id="toolsRequired"
-                  {...register("toolsRequired")}
+                  {...register("toolsRequired", {
+                    required: "Tools Required is required.",
+                  })}
                 />
                 <span className="slider position-toggle"></span>
               </label>
@@ -109,7 +128,9 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                 // htmlFor="visitReason"
                 id="toolsReason"
                 rows="4"
-                {...register("toolReason")}
+                {...register("toolReason", {
+                  required: "Tool reason is required.",
+                })}
               ></textarea>
             </div>
 
@@ -126,17 +147,33 @@ const Form1 = ({ onSubmit, defaultValues }) => {
             </div>
             <div className="label-input-group three-col">
               <label htmlFor="visitDate">Visit Date</label>
-              <input type="date" id="visitDate" {...register("visitDate")} />
+              <input
+                type="date"
+                id="visitDate"
+                {...register("visitDate", {
+                  required: "Visit Date is required.",
+                })}
+              />
             </div>
 
             <div className="label-input-group three-col">
               <label htmlFor="startTime">Start Time</label>
-              <input type="time" id="startTime" {...register("startTime")} />
+              <input
+                type="time"
+                id="startTime"
+                {...register("startTime", {
+                  required: "Start time is required.",
+                })}
+              />
             </div>
 
             <div className="label-input-group three-col">
               <label htmlFor="endTime">End Time</label>
-              <input type="time" id="endTime" {...register("endTime")} />
+              <input
+                type="time"
+                id="endTime"
+                {...register("endTime", { required: "End time is required." })}
+              />
             </div>
 
             <div className="label-input-group">
@@ -144,7 +181,9 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               <input
                 type="time"
                 id="userLocation"
-                {...register("userLocation")}
+                {...register("userLocation", {
+                  required: "Location is required.",
+                })}
               />
             </div>
             <div className="label-input-group">
@@ -152,7 +191,9 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               <select
                 id="category"
                 defaultValue={"DEFAULT"}
-                {...register("productcategory")}
+                {...register("productcategory", {
+                  required: "Category is required.",
+                })}
               >
                 <option value="visitor">Vistor</option>
                 <option value="farmer">Farmer</option>
