@@ -17,7 +17,9 @@ const Form1 = ({ onSubmit, defaultValues }) => {
           <form onSubmit={handleSubmit(onSubmit)} noValidate>
             <div className="label-input-group three-col">
               <label htmlFor="firstName">First Name</label>
-              <input type="text" id="firstName" {...register("firstName")} />
+              <input type="text" id="firstName" {...register("firstName", 
+              { required: 'Username is required.' }
+              )} />
             </div>
             <div className="label-input-group three-col">
               <label htmlFor="lastName">Last Name</label>
