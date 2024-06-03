@@ -1,5 +1,5 @@
 // Form1.jsx
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,8 +7,13 @@ import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 const Form1 = ({ onSubmit, defaultValues }) => {
   const { register, handleSubmit, control, formState } = useForm({ defaultValues });
-  const { errors } = formState;
+  const { errors} = formState;
 
+  //not sure how to get for state data for the displaying an error if the checkbox is and there is no message in the text area.
+  //I tried using the 'formState' and then the default Values, but was getting undefined on submit. 
+  // const [isForeignCountryVisited, setIsForeignCountryVisited] = useState(true);
+
+  
   return (
     <>
       <div className="lay-container">
@@ -45,6 +50,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                   required: "Company name is required.",
                 })}
               />
+              <p>{ errors.companyName?.message }</p>
             </div>
             <div className="label-input-group">
               <label htmlFor="emailAddress">Email</label>
@@ -57,8 +63,10 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
                     message: "Invalid Email",
                   },
+                  required: "Email is required.",
                 })}
               />
+               <p>{ errors.emailAddress?.message }</p>
             </div>
             <div className="label-input-group">
               <label htmlFor="phoneNumber">Phone Number</label>
@@ -69,6 +77,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                   required: "Phone number is required.",
                 })}
               />
+              <p>{ errors.phoneNumber?.message }</p>
             </div>
             <label htmlFor="visitForeignCountry" className="toggle">
               Have you visited a foreign country in the last 7 days?
@@ -101,6 +110,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                   required: "Visit Reason is required.",
                 })}
               ></textarea>
+              { isForeignCountryVisited && errors.visitReason?.message && (<p>{errors.visitReason.message}</p> )}
             </div>
             <hr
               style={{

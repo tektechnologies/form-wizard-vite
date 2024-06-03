@@ -31,6 +31,7 @@ const Modal = () => {
       console.log('clickin : ',data);
 
     setFormData(prevFormData => ({ ...prevFormData, ...data }));
+    
     setStep(step + 1);
 });
 
