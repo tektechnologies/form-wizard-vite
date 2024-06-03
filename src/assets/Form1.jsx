@@ -110,7 +110,8 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                   required: "Visit Reason is required.",
                 })}
               ></textarea>
-              { isForeignCountryVisited && errors.visitReason?.message && (<p>{errors.visitReason.message}</p> )}
+              {/* I need to replace isForeignCountryVisited with actual STATE data for the field  */}
+              {/* { isForeignCountryVisited && errors.visitReason?.message && (<p>{errors.visitReason.message}</p> )} */}
             </div>
             <hr
               style={{
@@ -119,6 +120,9 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                 border: "1px solid grey",
               }}
             />
+
+
+
             <div className="label-input-group">
               <h2>Tools Details</h2>
               <label htmlFor="toolsRequired" className="toggle">
@@ -144,6 +148,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                   required: "Tool reason is required.",
                 })}
               ></textarea>
+              {/* { istoolsRequired && errors.toolReason?.message && (<p>{errors.toolReason.message}</p> )} */}
             </div>
 
             <hr
@@ -166,6 +171,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                   required: "Visit Date is required.",
                 })}
               />
+              <p>{ errors.visitDate?.message }</p>
             </div>
 
             <div className="label-input-group three-col">
@@ -177,6 +183,8 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                   required: "Start time is required.",
                 })}
               />
+               <p>{ errors.startTime?.message }</p>
+              
             </div>
 
             <div className="label-input-group three-col">
@@ -186,6 +194,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                 id="endTime"
                 {...register("endTime", { required: "End time is required." })}
               />
+              <p>{ errors.endTime?.message }</p>
             </div>
 
             <div className="label-input-group">
@@ -197,6 +206,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                   required: "Location is required.",
                 })}
               />
+              <p>{ errors.userLocation?.message }</p>
             </div>
             <div className="label-input-group">
               <label htmlFor="category">Category</label>
@@ -207,11 +217,13 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                   required: "Category is required.",
                 })}
               >
+               <option value="">--Please choose an option--</option>
                 <option value="visitor">Vistor</option>
                 <option value="farmer">Farmer</option>
                 <option value="usda">USDA Rep</option>
                 <option value="porkypigg">Porky Pig</option>
               </select>
+              <p>{ errors.productcategory?.message }</p>
             </div>
             <hr
               style={{
