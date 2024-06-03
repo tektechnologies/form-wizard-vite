@@ -21,7 +21,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                 type="text"
                 id="firstName"
                 {...register("firstName", {
-                  required: "Username is required.",
+                  required: "User name is required.",
                 })}
               />
               <p>{ errors.firstName?.message }</p>
@@ -31,8 +31,9 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               <input
                 type="text"
                 id="lastName"
-                {...register("lastName", { required: "Lastname is required." })}
+                {...register("lastName", { required: "Last name is required." })}
               />
+               <p>{ errors.lastName?.message }</p>
             </div>
 
             <div className="label-input-group three-col">
