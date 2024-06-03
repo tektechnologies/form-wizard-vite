@@ -11,6 +11,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
 
   //not sure how to get for state data for the displaying an error if the checkbox is and there is no message in the text area.
   //I tried using the 'formState' and then the default Values, but was getting undefined on submit. 
+  // used the below code to force the conditional to test if it will work. once I can get actual state. 
   // const [isForeignCountryVisited, setIsForeignCountryVisited] = useState(true);
 
   
