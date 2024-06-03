@@ -48,7 +48,6 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               <input
                 type="text"
                 id="emailAddress"
-                // required: 'Email is required.',
                 {...register("emailAddress", {
                   pattern: {
                     value:
