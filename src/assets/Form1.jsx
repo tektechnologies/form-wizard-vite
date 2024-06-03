@@ -14,7 +14,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
       <div className="lay-container">
         <div className="form-container">
           <h2>Personal Details</h2>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(onSubmit)} noValidate>
             <div className="label-input-group three-col">
               <label htmlFor="firstName">First Name</label>
               <input type="text" id="firstName" {...register("firstName")} />
@@ -97,10 +97,10 @@ const Form1 = ({ onSubmit, defaultValues }) => {
             </div>
 
             <div className="label-textarea-group">
-              <label htmlFor="visitReason">Reason for Tools</label>
+              <label htmlFor="toolsReason">Reason for Tools</label>
               <textarea
-                htmlFor="toolReason"
-                id="toolReason"
+                // htmlFor="visitReason"
+                id="toolsReason"
                 rows="4"
                 {...register("toolReason")}
               ></textarea>
@@ -141,7 +141,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               />
             </div>
             <div className="label-input-group">
-              <label htmlFor="productcategory">Category</label>
+              <label htmlFor="category">Category</label>
               <select
                 id="category"
                 defaultValue={"DEFAULT"}
