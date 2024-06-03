@@ -6,7 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 const Form1 = ({ onSubmit, defaultValues }) => {
-  const { register, handleSubmit, control } = useForm({ defaultValues });
+  const { register, handleSubmit, control, formState } = useForm({ defaultValues });
+  const { errors } = formState;
 
   return (
     <>
@@ -23,6 +24,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                   required: "Username is required.",
                 })}
               />
+              <p>{ errors.firstName?.message }</p>
             </div>
             <div className="label-input-group three-col">
               <label htmlFor="lastName">Last Name</label>
