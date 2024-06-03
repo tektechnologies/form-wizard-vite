@@ -23,7 +23,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
             </div>
             <div className="label-input-group three-col">
               <label htmlFor="lastName">Last Name</label>
-              <input type="text" id="lastName" {...register("lastName")} />
+              <input type="text" id="lastName" {...register("lastName", { required: 'Lastname is required.' })} />
             </div>
 
             <div className="label-input-group three-col">
@@ -31,7 +31,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               <input
                 type="text"
                 id="companyName"
-                {...register("companyName")}
+                {...register("companyName",  { required: 'Company name is required.' })}
               />
             </div>
             <div className="label-input-group">
@@ -39,7 +39,12 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               <input
                 type="text"
                 id="emailAddress"
-                {...register("emailAddress")}
+                {...register("emailAddress", {
+                  pattern: {
+                    value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                    message: "Invalid email format",
+                    }
+              })}
               />
             </div>
             <div className="label-input-group">
