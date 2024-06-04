@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Form1 from './assets/Form1';
 import Form2 from './assets/Form2';
 import Form3 from './assets/Form3';
@@ -11,9 +11,9 @@ const Modal = () => {
   companyName :  '',
   emailAddress : '',
   phoneNumber :  '',
-  visitForeignCountry :  '',
+  visitForeignCountry :  false,
   visitReason :  '',
-  toolsRequired : '',
+  toolsRequired : false,
   toolReason :  '',
   visitDate :  '',
   startTime :  '',
@@ -26,14 +26,28 @@ const Modal = () => {
   field3: '',
   });
 
+
+
   // https://typeofnan.dev/fix-the-maximum-update-depth-exceeded-error-in-react/
   const handleNext = ((data) => {
-      console.log('clickin : ',data);
+      console.log('state on NEXT : ',data);
 
     setFormData(prevFormData => ({ ...prevFormData, ...data }));
     
     setStep(step + 1);
 });
+
+
+// https://stackoverflow.com/questions/3397585/navigator-geolocation-getcurrentposition-sometimes-works-sometimes-doesnt
+//                     based on location of IP address
+  useEffect(() => {
+    // console.log('geooooo');
+    navigator.geolocation.getCurrentPosition(function(position) {
+      // console.log("Latitude is :", position.coords.latitude);
+      // console.log("Longitude is :", position.coords.longitude);
+    });
+  }, []);
+
 
   const handleBack = () => {
     setStep(step - 1);

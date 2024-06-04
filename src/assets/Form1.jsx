@@ -1,20 +1,18 @@
 // Form1.jsx
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 const Form1 = ({ onSubmit, defaultValues }) => {
-  const { register, handleSubmit, control, formState } = useForm({ defaultValues });
+  const { register, handleSubmit, control, formState, watch } = useForm({ defaultValues });
   const { errors} = formState;
 
-  //not sure how to get for state data for the displaying an error if the checkbox is and there is no message in the text area.
-  //I tried using the 'formState' and then the default Values, but was getting undefined on submit. 
-  // used the below code to force the conditional to test if it will work. once I can get actual state. 
-  // const [isForeignCountryVisited, setIsForeignCountryVisited] = useState(true);
+ 
+const isVisitForeignCountryVisited = watch("visitForeignCountry", defaultValues.visitForeignCountry);
+console.log('true truuuu:',isVisitForeignCountryVisited);
 
-  
   return (
     <>
       <div className="lay-container">
@@ -86,7 +84,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                 type="checkbox"
                 id="visitForeignCountry"
                 {...register("visitForeignCountry", {
-                  required: "Visit Foreign County is required.",
+                  // required: "Visit Foreign County is required.",
                 })}
               />
               <span className="slider position-toggle"></span>
@@ -110,9 +108,9 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                 {...register("visitReason", {
                   required: "Visit Reason is required.",
                 })}
-              ></textarea>
+              ></textarea> 
               {/* I need to replace isForeignCountryVisited with actual STATE data for the field  */}
-              {/* { isForeignCountryVisited && errors.visitReason?.message && (<p>{errors.visitReason.message}</p> )} */}
+              {  (<p>{ errors.visitReason?.message }</p>) || isVisitForeignCountryVisited && errors.visitReason?.message && (<p>AWOL</p> )}
             </div>
             <hr
               style={{
@@ -131,24 +129,22 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                 <input
                   type="checkbox"
                   id="toolsRequired"
-                  {...register("toolsRequired", {
-                    required: "Tools Required is required.",
-                  })}
+                  {...register("toolsRequired")}
                 />
                 <span className="slider position-toggle"></span>
               </label>
             </div>
 
-            <div className="label-textarea-group">
+             <div className="label-textarea-group">
               <label htmlFor="toolsReason">Reason for Tools</label>
               <textarea
-                // htmlFor="visitReason"
+                htmlFor="toolsReason"
                 id="toolsReason"
                 rows="4"
                 {...register("toolReason", {
-                  required: "Tool reason is required.",
+                  message: "Tool reason is required.",
                 })}
-              ></textarea>
+              ></textarea> 
               {/* { istoolsRequired && errors.toolReason?.message && (<p>{errors.toolReason.message}</p> )} */}
             </div>
 
@@ -201,7 +197,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
             <div className="label-input-group">
               <label htmlFor="userLocation">Your Location</label>
               <input
-                type="time"
+                type="text"
                 id="userLocation"
                 {...register("userLocation", {
                   required: "Location is required.",

@@ -7,7 +7,7 @@ const Form2 = ({ onSubmit, defaultValues, handleBack }) => {
   const { register, handleSubmit, control } = useForm({ defaultValues });
  
 
-  console.log('handle back!!!!1', handleBack);
+  // console.log('handle back!!!!1', handleBack);
   return (
     <>
       <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
