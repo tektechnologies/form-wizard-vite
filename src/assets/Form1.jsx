@@ -201,7 +201,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
             <div className="label-input-group">
               <label htmlFor="userLocation">Your Location</label>
               <input
-                type="time"
+                type="text"
                 id="userLocation"
                 {...register("userLocation", {
                   required: "Location is required.",
