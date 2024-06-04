@@ -11,9 +11,9 @@ const Modal = () => {
   companyName :  '',
   emailAddress : '',
   phoneNumber :  '',
-  visitForeignCountry :  '',
+  visitForeignCountry :  false,
   visitReason :  '',
-  toolsRequired : '',
+  toolsRequired : false,
   toolReason :  '',
   visitDate :  '',
   startTime :  '',
@@ -30,7 +30,7 @@ const Modal = () => {
 
   // https://typeofnan.dev/fix-the-maximum-update-depth-exceeded-error-in-react/
   const handleNext = ((data) => {
-      console.log('clickin : ',data);
+      console.log('state on NEXT : ',data);
 
     setFormData(prevFormData => ({ ...prevFormData, ...data }));
     
@@ -41,10 +41,10 @@ const Modal = () => {
 // https://stackoverflow.com/questions/3397585/navigator-geolocation-getcurrentposition-sometimes-works-sometimes-doesnt
 //                     based on location of IP address
   useEffect(() => {
-    console.log('geooooo');
+    // console.log('geooooo');
     navigator.geolocation.getCurrentPosition(function(position) {
-      console.log("Latitude is :", position.coords.latitude);
-      console.log("Longitude is :", position.coords.longitude);
+      // console.log("Latitude is :", position.coords.latitude);
+      // console.log("Longitude is :", position.coords.longitude);
     });
   }, []);
 
