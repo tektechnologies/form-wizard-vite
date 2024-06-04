@@ -39,6 +39,7 @@ const Modal = () => {
 
 
 // https://stackoverflow.com/questions/3397585/navigator-geolocation-getcurrentposition-sometimes-works-sometimes-doesnt
+//                     based on location of IP address
   useEffect(() => {
     console.log('geooooo');
     navigator.geolocation.getCurrentPosition(function(position) {
