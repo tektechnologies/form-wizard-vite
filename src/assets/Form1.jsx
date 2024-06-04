@@ -1,27 +1,45 @@
 // Form1.jsx
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { DevTool } from "@hookform/devtools"
+import { DevTool } from "@hookform/devtools";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
-
 const Form1 = ({ onSubmit, defaultValues }) => {
-  const { register, handleSubmit, control } = useForm({ defaultValues });
+  const { register, handleSubmit, control, formState } = useForm({ defaultValues });
+  const { errors} = formState;
 
+  //not sure how to get for state data for the displaying an error if the checkbox is and there is no message in the text area.
+  //I tried using the 'formState' and then the default Values, but was getting undefined on submit. 
+  // used the below code to force the conditional to test if it will work. once I can get actual state. 
+  // const [isForeignCountryVisited, setIsForeignCountryVisited] = useState(true);
+
+  
   return (
     <>
       <div className="lay-container">
         <div className="form-container">
           <h2>Personal Details</h2>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(onSubmit)} noValidate>
             <div className="label-input-group three-col">
               <label htmlFor="firstName">First Name</label>
-              <input type="text" id="firstName" {...register("firstName")} />
+              <input
+                type="text"
+                id="firstName"
+                {...register("firstName", {
+                  required: "User name is required.",
+                })}
+              />
+              <p>{ errors.firstName?.message }</p>
             </div>
             <div className="label-input-group three-col">
               <label htmlFor="lastName">Last Name</label>
-              <input type="text" id="lastName" {...register("lastName")} />
+              <input
+                type="text"
+                id="lastName"
+                {...register("lastName", { required: "Last name is required." })}
+              />
+               <p>{ errors.lastName?.message }</p>
             </div>
 
             <div className="label-input-group three-col">
@@ -29,31 +47,47 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               <input
                 type="text"
                 id="companyName"
-                {...register("companyName")}
+                {...register("companyName", {
+                  required: "Company name is required.",
+                })}
               />
+              <p>{ errors.companyName?.message }</p>
             </div>
             <div className="label-input-group">
               <label htmlFor="emailAddress">Email</label>
               <input
                 type="text"
                 id="emailAddress"
-                {...register("emailAddress")}
+                {...register("emailAddress", {
+                  pattern: {
+                    value:
+                      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                    message: "Invalid Email",
+                  },
+                  required: "Email is required.",
+                })}
               />
+               <p>{ errors.emailAddress?.message }</p>
             </div>
             <div className="label-input-group">
               <label htmlFor="phoneNumber">Phone Number</label>
               <input
                 type="text"
                 id="phoneNumber"
-                {...register("phoneNumber")}
+                {...register("phoneNumber", {
+                  required: "Phone number is required.",
+                })}
               />
+              <p>{ errors.phoneNumber?.message }</p>
             </div>
             <label htmlFor="visitForeignCountry" className="toggle">
               Have you visited a foreign country in the last 7 days?
               <input
                 type="checkbox"
                 id="visitForeignCountry"
-                {...register("visitForeignCountry")}
+                {...register("visitForeignCountry", {
+                  required: "Visit Foreign County is required.",
+                })}
               />
               <span className="slider position-toggle"></span>
             </label>
@@ -73,8 +107,12 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                 htmlFor="visitReason"
                 id="visitReason"
                 rows="4"
-                {...register("visitReason")}
+                {...register("visitReason", {
+                  required: "Visit Reason is required.",
+                })}
               ></textarea>
+              {/* I need to replace isForeignCountryVisited with actual STATE data for the field  */}
+              {/* { isForeignCountryVisited && errors.visitReason?.message && (<p>{errors.visitReason.message}</p> )} */}
             </div>
             <hr
               style={{
@@ -83,6 +121,9 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                 border: "1px solid grey",
               }}
             />
+
+
+
             <div className="label-input-group">
               <h2>Tools Details</h2>
               <label htmlFor="toolsRequired" className="toggle">
@@ -90,20 +131,25 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                 <input
                   type="checkbox"
                   id="toolsRequired"
-                  {...register("toolsRequired")}
+                  {...register("toolsRequired", {
+                    required: "Tools Required is required.",
+                  })}
                 />
                 <span className="slider position-toggle"></span>
               </label>
             </div>
 
             <div className="label-textarea-group">
-              <label htmlFor="visitReason">Reason for Tools</label>
+              <label htmlFor="toolsReason">Reason for Tools</label>
               <textarea
-                htmlFor="toolReason"
-                id="toolReason"
+                // htmlFor="visitReason"
+                id="toolsReason"
                 rows="4"
-                {...register("toolReason")}
+                {...register("toolReason", {
+                  required: "Tool reason is required.",
+                })}
               ></textarea>
+              {/* { istoolsRequired && errors.toolReason?.message && (<p>{errors.toolReason.message}</p> )} */}
             </div>
 
             <hr
@@ -119,17 +165,37 @@ const Form1 = ({ onSubmit, defaultValues }) => {
             </div>
             <div className="label-input-group three-col">
               <label htmlFor="visitDate">Visit Date</label>
-              <input type="date" id="visitDate" {...register("visitDate")} />
+              <input
+                type="date"
+                id="visitDate"
+                {...register("visitDate", {
+                  required: "Visit Date is required.",
+                })}
+              />
+              <p>{ errors.visitDate?.message }</p>
             </div>
 
             <div className="label-input-group three-col">
               <label htmlFor="startTime">Start Time</label>
-              <input type="time" id="startTime" {...register("startTime")} />
+              <input
+                type="time"
+                id="startTime"
+                {...register("startTime", {
+                  required: "Start time is required.",
+                })}
+              />
+               <p>{ errors.startTime?.message }</p>
+              
             </div>
 
             <div className="label-input-group three-col">
               <label htmlFor="endTime">End Time</label>
-              <input type="time" id="endTime" {...register("endTime")} />
+              <input
+                type="time"
+                id="endTime"
+                {...register("endTime", { required: "End time is required." })}
+              />
+              <p>{ errors.endTime?.message }</p>
             </div>
 
             <div className="label-input-group">
@@ -137,21 +203,28 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               <input
                 type="time"
                 id="userLocation"
-                {...register("userLocation")}
+                {...register("userLocation", {
+                  required: "Location is required.",
+                })}
               />
+              <p>{ errors.userLocation?.message }</p>
             </div>
             <div className="label-input-group">
               <label htmlFor="category">Category</label>
               <select
                 id="category"
                 defaultValue={"DEFAULT"}
-                // {...register("productcategory")}
+                {...register("productcategory", {
+                  required: "Category is required.",
+                })}
               >
+               <option value="">--Please choose an option--</option>
                 <option value="visitor">Vistor</option>
                 <option value="farmer">Farmer</option>
                 <option value="usda">USDA Rep</option>
                 <option value="porkypigg">Porky Pig</option>
               </select>
+              <p>{ errors.productcategory?.message }</p>
             </div>
             <hr
               style={{

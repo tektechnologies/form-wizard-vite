@@ -35,9 +35,14 @@ const Modal = () => {
   
   const handleNext = (data) => {
     console.log('handleNext data ', data);
+  // https://typeofnan.dev/fix-the-maximum-update-depth-exceeded-error-in-react/
+  const handleNext = ((data) => {
+      console.log('clickin : ',data);
+
     setFormData(prevFormData => ({ ...prevFormData, ...data }));
+    
     setStep(step + 1);
-  };
+});
 
   const handleBack = () => {
     setStep(step - 1);
@@ -47,14 +52,15 @@ const Modal = () => {
     console.log('handle Final Submit:FINAL', data);
     setFormData(prevFormData => ({ ...prevFormData, ...data }));
     // handle final submission
-    console.log("Final Data:", { ...formData, ...data });
+    // console.log("Final Data:", { ...formData, ...data });
+    
   };
 
-  console.log('state : ',formData);
+  // console.log('state : ',formData);
   return (
     <div className="modal">
      {/* updating state incase user back clicks  */}
-      {step === 1 && <Form1 onSubmit={handleNext} defaultValues={formData} />}
+      {step === 1 && <Form1 onSubmit={handleNext}  defaultValues={formData} />}
       {step === 2 && (
         <div>
         {/* updating state incase user back clicks  */}
