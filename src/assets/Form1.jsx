@@ -141,11 +141,11 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               />
             </div>
             <div className="label-input-group">
-              <label htmlFor="productcategory">Category</label>
+              <label htmlFor="category">Category</label>
               <select
                 id="category"
                 defaultValue={"DEFAULT"}
-                {...register("productcategory")}
+                // {...register("productcategory")}
               >
                 <option value="visitor">Vistor</option>
                 <option value="farmer">Farmer</option>

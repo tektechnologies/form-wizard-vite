@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Form1 from './assets/Form1';
 import Form2 from './assets/Form2';
 import Form3 from './assets/Form3';
@@ -26,7 +26,12 @@ const Modal = () => {
   field3: '',
   });
 
- 
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      console.log("Latitude is :", position.coords.latitude);
+      console.log("Longitude is :", position.coords.longitude);
+    });
+  }, []);
   
   const handleNext = (data) => {
     console.log('handleNext data ', data);
