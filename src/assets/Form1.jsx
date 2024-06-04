@@ -167,6 +167,7 @@ console.log('true truuuu:',isVisitForeignCountryVisited);
                 {...register("visitDate", {
                   required: "Visit Date is required.",
                 })}
+                min={new Date().toISOString().split("T")[0]} // Set min attribute to today's date
               />
               <p>{ errors.visitDate?.message }</p>
             </div>
