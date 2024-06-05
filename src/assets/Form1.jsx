@@ -7,11 +7,11 @@ import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 const Form1 = ({ onSubmit, defaultValues }) => {
   const { register, handleSubmit, control, formState, watch } = useForm({ defaultValues });
-  const { errors} = formState;
+  const { errors } = formState;
 
- 
-const isVisitForeignCountryVisited = watch("visitForeignCountry", defaultValues.visitForeignCountry);
-console.log('true truuuu:',isVisitForeignCountryVisited);
+
+  const isVisitForeignCountryVisited = watch("visitForeignCountry", defaultValues.visitForeignCountry);
+  console.log('true truuuu:', isVisitForeignCountryVisited);
 
   return (
     <>
@@ -28,7 +28,7 @@ console.log('true truuuu:',isVisitForeignCountryVisited);
                   required: "User name is required.",
                 })}
               />
-              <p>{ errors.firstName?.message }</p>
+              <p>{errors.firstName?.message}</p>
             </div>
             <div className="label-input-group three-col">
               <label htmlFor="lastName">Last Name</label>
@@ -37,7 +37,7 @@ console.log('true truuuu:',isVisitForeignCountryVisited);
                 id="lastName"
                 {...register("lastName", { required: "Last name is required." })}
               />
-               <p>{ errors.lastName?.message }</p>
+              <p>{errors.lastName?.message}</p>
             </div>
 
             <div className="label-input-group three-col">
@@ -49,7 +49,7 @@ console.log('true truuuu:',isVisitForeignCountryVisited);
                   required: "Company name is required.",
                 })}
               />
-              <p>{ errors.companyName?.message }</p>
+              <p>{errors.companyName?.message}</p>
             </div>
             <div className="label-input-group">
               <label htmlFor="emailAddress">Email</label>
@@ -65,7 +65,7 @@ console.log('true truuuu:',isVisitForeignCountryVisited);
                   required: "Email is required.",
                 })}
               />
-               <p>{ errors.emailAddress?.message }</p>
+              <p>{errors.emailAddress?.message}</p>
             </div>
             <div className="label-input-group">
               <label htmlFor="phoneNumber">Phone Number</label>
@@ -76,7 +76,7 @@ console.log('true truuuu:',isVisitForeignCountryVisited);
                   required: "Phone number is required.",
                 })}
               />
-              <p>{ errors.phoneNumber?.message }</p>
+              <p>{errors.phoneNumber?.message}</p>
             </div>
             <label htmlFor="visitForeignCountry" className="toggle">
               Have you visited a foreign country in the last 7 days?
@@ -108,9 +108,9 @@ console.log('true truuuu:',isVisitForeignCountryVisited);
                 {...register("visitReason", {
                   required: "Visit Reason is required.",
                 })}
-              ></textarea> 
+              ></textarea>
               {/* I need to replace isForeignCountryVisited with actual STATE data for the field  */}
-              {  (<p>{ errors.visitReason?.message }</p>) || isVisitForeignCountryVisited && errors.visitReason?.message && (<p>AWOL</p> )}
+              {(<p>{errors.visitReason?.message}</p>) || isVisitForeignCountryVisited && errors.visitReason?.message && (<p>AWOL</p>)}
             </div>
             <hr
               style={{
@@ -124,18 +124,20 @@ console.log('true truuuu:',isVisitForeignCountryVisited);
 
             <div className="label-input-group">
               <h2>Tools Details</h2>
-              <label htmlFor="toolsRequired" className="toggle">
-                Tools Required
-                <input
-                  type="checkbox"
-                  id="toolsRequired"
-                  {...register("toolsRequired")}
-                />
-                <span className="slider position-toggle"></span>
-              </label>
+              <div className="label-margin-bottom">
+                <label htmlFor="toolsRequired" className="toggle">
+                  Tools Required
+                  <input
+                    type="checkbox"
+                    id="toolsRequired"
+                    {...register("toolsRequired")}
+                  />
+                  <span className="slider position-toggle"></span>
+                </label>
+                </div>
             </div>
 
-             <div className="label-textarea-group">
+            <div className="label-textarea-group">
               <label htmlFor="toolsReason">Reason for Tools</label>
               <textarea
                 htmlFor="toolsReason"
@@ -144,7 +146,7 @@ console.log('true truuuu:',isVisitForeignCountryVisited);
                 {...register("toolReason", {
                   message: "Tool reason is required.",
                 })}
-              ></textarea> 
+              ></textarea>
               {/* { istoolsRequired && errors.toolReason?.message && (<p>{errors.toolReason.message}</p> )} */}
             </div>
 
@@ -169,7 +171,7 @@ console.log('true truuuu:',isVisitForeignCountryVisited);
                 })}
                 min={new Date().toISOString().split("T")[0]} // Set min attribute to today's date
               />
-              <p>{ errors.visitDate?.message }</p>
+              <p>{errors.visitDate?.message}</p>
             </div>
 
             <div className="label-input-group three-col">
@@ -181,8 +183,8 @@ console.log('true truuuu:',isVisitForeignCountryVisited);
                   required: "Start time is required.",
                 })}
               />
-               <p>{ errors.startTime?.message }</p>
-              
+              <p>{errors.startTime?.message}</p>
+
             </div>
 
             <div className="label-input-group three-col">
@@ -192,7 +194,7 @@ console.log('true truuuu:',isVisitForeignCountryVisited);
                 id="endTime"
                 {...register("endTime", { required: "End time is required." })}
               />
-              <p>{ errors.endTime?.message }</p>
+              <p>{errors.endTime?.message}</p>
             </div>
 
             <div className="label-input-group">
@@ -204,7 +206,7 @@ console.log('true truuuu:',isVisitForeignCountryVisited);
                   required: "Location is required.",
                 })}
               />
-              <p>{ errors.userLocation?.message }</p>
+              <p>{errors.userLocation?.message}</p>
             </div>
             <div className="label-input-group">
               <label htmlFor="category">Category</label>
@@ -215,13 +217,13 @@ console.log('true truuuu:',isVisitForeignCountryVisited);
                   required: "Category is required.",
                 })}
               >
-               <option value="">--Please choose an option--</option>
+                <option value="">--Please choose an option--</option>
                 <option value="visitor">Vistor</option>
                 <option value="farmer">Farmer</option>
                 <option value="usda">USDA Rep</option>
                 <option value="porkypigg">Porky Pig</option>
               </select>
-              <p>{ errors.productcategory?.message }</p>
+              <p>{errors.productcategory?.message}</p>
             </div>
             <hr
               style={{

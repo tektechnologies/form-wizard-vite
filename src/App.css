@@ -228,3 +228,6 @@ textarea {
     margin: 0 auto;
   }
 
+.label-margin-bottom {
+  margin-bottom: 10px;
+}
