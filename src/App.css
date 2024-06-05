@@ -204,7 +204,6 @@ input:-webkit-autofill:focus {
   background-color: #3a716c;
   border-radius: 5px;
   border: none;
-  margin: 10px;
 }
 * {
   box-sizing: border-box;
