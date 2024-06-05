@@ -59,7 +59,8 @@ select {
   border-radius: 10px;
   box-sizing: border-box;
   font-size: 16px;
-  color: #1F2C2A;;
+  color: #1F2C2A;
+  ;
 }
 
 form {
@@ -154,28 +155,29 @@ input:-webkit-autofill:focus {
 .slider {
   position: relative;
   display: inline-block;
-  width: 75px;
-  height: 40px;
+  width: 100px;
+  height: 45px;
   background-color: #ccc;
   border-radius: 34px;
   transition: background-color 0.3s;
 }
+
 
 /* Style the circle inside the slider */
 /* Circle inside the slider */
 .slider:before {
   position: absolute;
   content: "No";
-  font-size: 15px;
-  height: 32px;
-  width: 32px;
+  font-size: 16px;
+  width: 55px;
+  height: 35px;
   left: 4px;
-  bottom: 4px;
+  bottom: 5px;
   background-color: #e75b29;
   color: whitesmoke;
-  border-radius: 50%;
+  border-radius: 34px;
   text-align: center;
-  line-height: 30px;
+  line-height: 35px;
   transition: transform 0.3s, content 0.3s;
 }
 
@@ -191,7 +193,7 @@ input:-webkit-autofill:focus {
 
 /* Move the circle and change text when checked */
 .toggle input:checked+.slider:before {
-  transform: translateX(35px);
+  transform: translateX(38px);
   content: "Yes";
 }
 
@@ -259,4 +261,3 @@ input:-webkit-autofill:focus {
 .label-margin-bottom {
   margin-bottom: 10px;
 }
-
