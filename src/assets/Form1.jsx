@@ -6,12 +6,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 const Form1 = ({ onSubmit, defaultValues }) => {
-  const { register, handleSubmit, control, formState, watch } = useForm({ defaultValues });
+  const { register, handleSubmit, control, formState, watch, clearErrors } = useForm({ defaultValues });
   const { errors } = formState;
   const istoolsRequired = watch('toolsRequired', defaultValues.toolsRequired);
-  console.log('istools required: ',istoolsRequired);
+  console.log('istools required: ', istoolsRequired);
 
-
+  const handleToolsRequiredChange = (event) => {
+    console.log('tool reason error: ', event.target.checked);
+    if (!event.target.checked) {
+      clearErrors('toolReason');
+    }
+  }
 
 
   return (
@@ -128,7 +133,9 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                   <input
                     type="checkbox"
                     id="toolsRequired"
-                    {...register("toolsRequired")}
+                    {...register("toolsRequired", {
+                      onChange: handleToolsRequiredChange
+                    })}
                   />
                   <span className="slider position-toggle"></span>
                 </label>
@@ -137,16 +144,16 @@ const Form1 = ({ onSubmit, defaultValues }) => {
 
             <div className="label-textarea-group">
               <label htmlFor="toolsReason">Reason for Tools</label>
+
               <textarea
                 htmlFor="toolsReason"
                 id="toolsReason"
                 rows="4"
                 {...register("toolReason", {
-                  // required: istoolsRequired ? "Tool reason is required." : false,
                   validate: value => istoolsRequired ? value !== "" || "Tool reason is required." : true,
                 })}
               ></textarea>
-              { errors.toolReason?.message && (<p>{errors.toolReason.message}</p> )}
+              {errors.toolReason?.message && (<p>{errors.toolReason.message}</p>)}
             </div>
 
             <hr
