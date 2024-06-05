@@ -55,14 +55,10 @@ textarea {
 
 select {
   border: 1px solid gray;
-  position: relative;
-  line-height: 4ex;
   width: calc(100% - 0px);
-  padding: 18px;
-  margin-bottom: 15px;
+  padding: 13px;
   border: 1px solid #cccccc;
   border-radius: 10px;
-  box-sizing: border-box;
   font-size: 16px;
   color: #1F2C2A;
   ;
