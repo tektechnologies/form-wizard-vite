@@ -41,7 +41,7 @@ select,
 textarea {
   border: 1px solid gray;
   position: relative;
-  line-height: 4ex;
+  line-height: 3ex;
   width: calc(100% - 0px);
   padding: 10px;
   margin-bottom: 15px;
