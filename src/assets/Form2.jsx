@@ -12,7 +12,7 @@ const Form2 = ({ onSubmit, defaultValues, handleBack }) => {
     <>
       <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
         <object type="image/svg+xml" data="file.svg" >
-          <span class="errorSpan" >Your browser does not support SVG!</span>
+          <span className="errorSpan" >Your browser does not support SVG!</span>
         </object>
 
 
@@ -22,7 +22,8 @@ const Form2 = ({ onSubmit, defaultValues, handleBack }) => {
         <div className="signature-div">
           <p>Tap To Sign</p>
         </div>
-        <div className="button-group">
+        {/* <div className="button-group"> */}
+        <div>
           <button onClick={handleBack} className="back-button-50">Back</button>
           <button type="submit" className="next-button-50">Next</button>
         </div>
