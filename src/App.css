@@ -1,10 +1,11 @@
 * {
-  /* outline: dashed blueviolet; */
+  box-sizing: border-box;
 }
 
 body {
   width: 1200px;
   margin: 0 auto;
+  font-family: Poppins;
 }
 
 h2 {
@@ -40,7 +41,7 @@ textarea {
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 16px;
-  color: #333333;
+  color: #1F2C2A;
 }
 
 select {
@@ -54,7 +55,7 @@ select {
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 16px;
-  color: #333333;
+  color: #1F2C2A;;
 }
 
 form {
@@ -87,12 +88,9 @@ input:-webkit-autofill:focus {
   background-color: #ffffff;
   padding: 50px;
   border-radius: 8px;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, .5); */
   width: 100%;
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
-  /* order: 2; */
   flex-direction: column;
 }
 
@@ -106,6 +104,7 @@ input:-webkit-autofill:focus {
   flex-direction: column;
   flex-basis: calc(50% - 10px);
 }
+
 .button-group {
   display: flex;
   flex-direction: column;
@@ -205,9 +204,7 @@ input:-webkit-autofill:focus {
   border-radius: 5px;
   border: none;
 }
-* {
-  box-sizing: border-box;
-}
+
 .next-button-50 {
   width: 50%;
   height: 75px;
@@ -258,3 +255,25 @@ input:-webkit-autofill:focus {
 .label-margin-bottom {
   margin-bottom: 10px;
 }
+
+
+
+/* Visitor Request Form */
+
+position: absolute;
+width: 251px;
+height: 32px;
+left: 329px;
+top: 50px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 135%;
+/* or 32px */
+h5{
+  color: #1F2C2A;
+}
+
+
