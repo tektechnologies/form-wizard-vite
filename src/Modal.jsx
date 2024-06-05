@@ -6,11 +6,11 @@ import Form3 from './assets/Form3';
 const Modal = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
-  firstName : '',
-  lastName :  '',
-  companyName :  '',
-  emailAddress : '',
-  phoneNumber :  '',
+  firstName : 'c',
+  lastName :  'cc',
+  companyName :  'c',
+  emailAddress : 'bob@test.com',
+  phoneNumber :  '555-555-5555',
   visitForeignCountry :  false,
   visitReason :  '',
   toolsRequired : false,

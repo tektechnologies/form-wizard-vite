@@ -9,12 +9,20 @@ const Form3 = ({ onSubmit, defaultValues, handleBack }) => {
   return (
     <>
       <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
-        <input {...register("field3")} placeholder="Field 3" />
+        {/* <input {...register("field3")} placeholder="Field 3" /> */}
+        <object type="image/svg+xml" data="file1.svg" >
+          <span className="errorSpan" >Your browser does not support SVG!</span>
+        </object>
 
+
+        <h2>Signature</h2>
+        <div className="signature-div">
+          <p>Tap To Sign</p>
+        </div>
         <div>
-        <button onClick={handleBack} className="back-button-50">Back</button>
+          <button onClick={handleBack} className="back-button-50">Back</button>
 
-        <button type="submit" className="next-button-50">Submit</button>
+          <button type="submit" className="next-button-50">Submit</button>
         </div>
       </form>
       <DevTool control={control} />
