@@ -142,10 +142,11 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                 id="toolsReason"
                 rows="4"
                 {...register("toolReason", {
-                  message: "Tool reason is required.",
+                  // required: istoolsRequired ? "Tool reason is required." : false,
+                  validate: value => istoolsRequired ? value !== "" || "Tool reason is required." : true,
                 })}
               ></textarea>
-              {/* { istoolsRequired && errors.toolReason?.message && (<p>{errors.toolReason.message}</p> )} */}
+              { errors.toolReason?.message && (<p>{errors.toolReason.message}</p> )}
             </div>
 
             <hr
