@@ -182,7 +182,6 @@ input:-webkit-autofill:focus {
   transform: translateX(35px);
   content: "Yes";
 }
-
 /* -------------------------toggle-end-------------------- */
 
 
@@ -222,7 +221,7 @@ input:-webkit-autofill:focus {
   color: #e75b29;
   margin-top: 5px;
 }
-
+/* place holder for the actual signature component  */
 .signature-div {
   height: 150px;
   width: 100%;
@@ -238,10 +237,8 @@ input:-webkit-autofill:focus {
   margin-top: 60px;
 }
 
-
-
 .lay-container {
-  width: 800px;
+  width: 1000px;
   margin: 0 auto;
 }
 
