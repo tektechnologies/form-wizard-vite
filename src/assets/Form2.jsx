@@ -13,7 +13,7 @@ const Form2 = ({ onSubmit, defaultValues, handleBack }) => {
       <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
         <input {...register("field2")} placeholder="Field 2" />
 
-      <div>
+      <div className="button-group">
         <button onClick={handleBack} className="back-button-50">Back</button>
 
         <button type="submit" className="next-button-50">Next</button>

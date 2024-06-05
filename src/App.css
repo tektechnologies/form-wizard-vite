@@ -8,7 +8,7 @@ h2 {
   font-size: 24px;
 }
 
- /* Form styles  */
+/* Form styles  */
 label {
   display: table;
   z-index: 1000;
@@ -102,6 +102,11 @@ input:-webkit-autofill:focus {
   flex-direction: column;
   flex-basis: calc(50% - 15px);
 }
+.button-group {
+  display: flex;
+  flex-direction: column;
+  flex-basis: calc(50% - 15px);
+}
 
 .label-input-group p {
   margin: -10px 0px 0px 5px;
@@ -182,6 +187,7 @@ input:-webkit-autofill:focus {
   transform: translateX(35px);
   content: "Yes";
 }
+
 /* -------------------------toggle-end-------------------- */
 
 
@@ -194,8 +200,11 @@ input:-webkit-autofill:focus {
   background-color: #3a716c;
   border-radius: 5px;
   border: none;
+  margin: 10px;
 }
-
+* {
+  box-sizing: border-box;
+}
 .next-button-50 {
   width: 50%;
   height: 75px;
@@ -221,6 +230,7 @@ input:-webkit-autofill:focus {
   color: #e75b29;
   margin-top: 5px;
 }
+
 /* place holder for the actual signature component  */
 .signature-div {
   height: 150px;
