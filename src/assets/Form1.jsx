@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 const Form1 = ({ onSubmit, defaultValues }) => {
-  const { register, handleSubmit, control, formState} = useForm({ defaultValues });
+  const { register, handleSubmit, control, formState } = useForm({ defaultValues });
   const { errors } = formState;
 
 
@@ -82,9 +82,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               <input
                 type="checkbox"
                 id="visitForeignCountry"
-                {...register("visitForeignCountry", {
-                  // required: "Visit Foreign County is required.",
-                })}
+                {...register("visitForeignCountry")}
               />
               <span className="slider position-toggle"></span>
             </label>
@@ -108,8 +106,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                   required: "Visit Reason is required.",
                 })}
               ></textarea>
-              {/* I need to replace isForeignCountryVisited with actual STATE data for the field  */}
-              {(<p>{errors.visitReason?.message}</p>) || isVisitForeignCountryVisited && errors.visitReason?.message && (<p>AWOL</p>)}
+              {<p>{errors.visitReason?.message}</p>}
             </div>
             <hr
               style={{
@@ -133,7 +130,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                   />
                   <span className="slider position-toggle"></span>
                 </label>
-                </div>
+              </div>
             </div>
 
             <div className="label-textarea-group">
