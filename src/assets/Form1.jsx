@@ -241,7 +241,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
 
             <FontAwesomeIcon
               icon={faCircleExclamation}
-              style={{ height: "40px", color: "#E75B29" }}
+              style={{ height: "25px", color: "#E75B29" }}
             />
             <h2 className="color-alert">ELECTRONIC DEVICES</h2>
 
