@@ -6,26 +6,28 @@ body {
   width: 1200px;
   margin: 0 auto;
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
 }
 
 h2 {
   display: inline-block;
-  font-size: 24px;
+  font-size: 18px;
 }
+
 
 /* Form styles  */
 label {
   display: table;
   z-index: 1000;
   margin: 0px auto;
-  font-size: 20px;
+  font-size: 18px;
   background-color: rgb(255, 255, 255);
   margin-bottom: -15px;
   margin-left: 20px;
   color: #555555;
 }
+
 
 input[type="text"],
 input[type="email"],
@@ -40,7 +42,7 @@ textarea {
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #cccccc;
-  border-radius: 5px;
+  border-radius: 10px;
   box-sizing: border-box;
   font-size: 16px;
   color: #1F2C2A;
@@ -54,7 +56,7 @@ select {
   padding: 18px;
   margin-bottom: 15px;
   border: 1px solid #cccccc;
-  border-radius: 5px;
+  border-radius: 10px;
   box-sizing: border-box;
   font-size: 16px;
   color: #1F2C2A;;
