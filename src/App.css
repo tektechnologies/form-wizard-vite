@@ -22,7 +22,7 @@ label {
   margin: 0px auto;
   font-size: 20px;
   background-color: rgb(255, 255, 255);
-  margin-bottom: -12px;
+  margin-bottom: -15px;
   margin-left: 20px;
   color: #555555;
 }
@@ -257,7 +257,4 @@ input:-webkit-autofill:focus {
 .label-margin-bottom {
   margin-bottom: 10px;
 }
-
-
-
 

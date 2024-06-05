@@ -97,7 +97,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               style={{
                 width: "100%",
                 color: "grey",
-                border: "1px solid grey",
+                border: '1px solid rgba(0, 0, 0, 0.12)'
               }}
             />
 
@@ -119,7 +119,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               style={{
                 width: "100%",
                 color: "grey",
-                border: "1px solid grey",
+                border: '1px solid rgba(0, 0, 0, 0.12)'
               }}
             />
 
@@ -160,7 +160,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               style={{
                 width: "100%",
                 color: "grey",
-                border: "1px solid grey",
+                border: '1px solid rgba(0, 0, 0, 0.12)'
               }}
             />
 
@@ -235,7 +235,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               style={{
                 width: "100%",
                 color: "grey",
-                border: "1px solid grey",
+                border: '1px solid rgba(0, 0, 0, 0.12)'
               }}
             />
 
