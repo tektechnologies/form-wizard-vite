@@ -11,10 +11,15 @@ const Form3 = ({ onSubmit, defaultValues, handleBack }) => {
       <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
         <input {...register("field3")} placeholder="Field 3" />
 
-        <div>
-        <button onClick={handleBack} className="back-button-50">Back</button>
 
-        <button type="submit" className="next-button-50">Submit</button>
+        <h2>Signature</h2>
+        <div className="signature-div">
+          <p>Tap To Sign</p>
+        </div>
+        <div>
+          <button onClick={handleBack} className="back-button-50">Back</button>
+
+          <button type="submit" className="next-button-50">Submit</button>
         </div>
       </form>
       <DevTool control={control} />
