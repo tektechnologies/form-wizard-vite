@@ -4,27 +4,17 @@ import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 
 const Form2 = ({ onSubmit, defaultValues, handleBack }) => {
-  const { register, handleSubmit, control, formState, watch } = useForm({ defaultValues });
+  const { register, handleSubmit, control, formState } = useForm({ defaultValues });
   const { errors } = formState;
 
-  // const isanimalWelfareInput = watch('animalWelfareInput', defaultValues.animalWelfareInput);
-  // console.log('isanimalWelfareInput required: ', isanimalWelfareInput);
-
-  // const handleAnimalWelfareInputChange = (event) => {
-  //   console.log('tool reason error: ', event.target.checked);
-  //   if (!event.target.checked) {
-  //     clearErrors('animalWelfareInput');
-
-  //   }
-  // }
-
-
-
-console.log('form 2 state',formState.defaultValues);
-
+ 
   return (
     <>
+        
+
+  
       <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
+      <h2>Door Access System Animal Welfare Policy</h2>
         <object type="image/svg+xml" data="file.svg" >
           <span className="errorSpan" >Your browser does not support SVG!</span>
         </object>
@@ -40,14 +30,19 @@ console.log('form 2 state',formState.defaultValues);
             type="checkbox"
             id="animalWelfareInput"
             {...register("animalWelfareInput", {
-              required: 'Im gonna need you to check this box, mmmmk.'
+              required: 'By clicking here, I state that I have read and understood the terms and conditions..'
             })}
           />
+
+
+
+
+          
           I certify, by signing the above statement, that if at any time during my visit I witness signs of animal abuse of
           neglect I will report the incident immediately to Door Access System or via the
           Door Access System Animal Welfare Hotline. If I have any questions regarding this information or something I saw, I will speak to a member of Door Access System within 24 hours.
         </label>
-        <p>{errors.animalWelfareInput?.message}</p>
+        <p className="error-alert">{errors.animalWelfareInput?.message}</p>
         <h2>Signature</h2>
         <div className="signature-div">
           <p>Tap To Sign</p>
