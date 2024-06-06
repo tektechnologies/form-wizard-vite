@@ -155,7 +155,7 @@ input:-webkit-autofill:focus {
 	position: relative;
 	display: inline-block;
 	width: 90px;
-	height: 35px;
+	height: 31px;
 	background-color: #ccc;
 	border-radius: 34px;
 	transition: background-color 0.3s;
@@ -171,7 +171,7 @@ input:-webkit-autofill:focus {
 	width: 50px;
 	height: 25px;
 	left: 4px;
-	bottom: 5px;
+	bottom: 3px;
 	background-color: #e75b29;
 	color: whitesmoke;
 	border-radius: 34px;
