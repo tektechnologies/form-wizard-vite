@@ -205,8 +205,8 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                 <option value="">-- Choose a Location --</option>
                 <option value="barn-one">Barn 1</option>
                 <option value="barn-two">Barn 2</option>
-                <option value="barn-three">Barn 2</option>
-                <option value="barn-four">Barn 3</option>
+                <option value="barn-three">Barn 3</option>
+                <option value="barn-four">Barn 4</option>
               </select>
               <p>{errors.userLocation?.message}</p>
             </div>
