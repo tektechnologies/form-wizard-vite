@@ -3,7 +3,7 @@
 }
 
 body {
-	width: 1200px;
+	width: 900px;
 	margin: 0 auto;
 	background-color: rgb(248, 248, 255);
 	/* https://fonts.google.com/selection/embed */
@@ -129,6 +129,7 @@ input:-webkit-autofill:focus {
 	display: flex;
 	flex-direction: column;
 	flex-basis: calc(100% - 0px);
+	margin-top: -15px;
 }
 
 /* text area for visit reason */
@@ -276,7 +277,8 @@ input:-webkit-autofill:focus {
 }
 
 .label-margin-bottom {
-	margin-bottom: 10px;
+	margin-top: -10px;
+	margin-bottom: 20px;
 }
 
 
@@ -305,6 +307,7 @@ input:-webkit-autofill:focus {
 }
 
 .para-styles {
+	margin-top: -20px;
 	margin-left: 50px;
 	color: #1F2C2A;
 	font-family: 'Poppins';
