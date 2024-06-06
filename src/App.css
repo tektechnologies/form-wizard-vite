@@ -196,8 +196,9 @@ input:-webkit-autofill:focus {
 
 .button-group {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
 }
+
 
 .next-button {
   width: 100%;
@@ -205,8 +206,13 @@ input:-webkit-autofill:focus {
   font-size: 24px;
   color: whitesmoke;
   background-color: #3a716c;
-  border-radius: 5px;
+  border-radius: 7px;
   border: none;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .next-button-50 {
@@ -215,19 +221,29 @@ input:-webkit-autofill:focus {
   font-size: 24px;
   color: whitesmoke;
   background-color: #3a716c;
-  border-radius: 5px;
+  border-radius: 7px;
   border: none;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .back-button-50 {
   width: 48%;
   height: 75px;
   font-size: 24px;
-  color: whitesmoke;
-  background-color: #838988;
-  border-radius: 5px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  background-color: #E9EAEA;
+  border-radius: 7px;
   border: none;
 }
+
 
 .color-alert {
   font-weight: bold;
