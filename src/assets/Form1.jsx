@@ -212,11 +212,11 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                   required: "Location is required.",
                 })}
               >
-                <option value="">-- Choose a location --</option>
-                <option value="visitor">Barn 1</option>
-                <option value="farmer">Barn 2</option>
-                <option value="usda">Barn 2</option>
-                <option value="porkypigg">Barn 3</option>
+                <option value="">-- Choose a Location --</option>
+                <option value="barn-one">Barn 1</option>
+                <option value="barn-two">Barn 2</option>
+                <option value="barn-three">Barn 2</option>
+                <option value="barn-four">Barn 3</option>
               </select>
               <p>{errors.userLocation?.message}</p>
             </div>
@@ -231,7 +231,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                   required: "Category is required.",
                 })}
               >
-                <option value="">-- Choose an option --</option>
+                <option value="">-- Choose an Option --</option>
                 <option value="visitor">Vistor</option>
                 <option value="farmer">Farmer</option>
                 <option value="usda">USDA Rep</option>
