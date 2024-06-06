@@ -239,7 +239,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               style={{ height: "25px", color: "#E75B29" }}
             />
             <h2 className="color-alert">ELECTRONIC DEVICES</h2>
-            <p>
+            <p className="para-styles">
               No cell phones, cameras, audio or visual equipment, or any other
               electronic devices are permitted on the premises without written
               approval by Door Access System. By signing this statement, you
@@ -248,7 +248,6 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               bringing such devices onto the premises without prior written
               approval
             </p>
-            {""}
             <h2>Signature</h2>
             <div className="signature-div">
               <p>Tap To Sign</p>
