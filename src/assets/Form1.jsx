@@ -205,15 +205,23 @@ const Form1 = ({ onSubmit, defaultValues }) => {
 
             <div className="label-input-group">
               <label htmlFor="userLocation">Your Location</label>
-              <input
-                type="text"
+              <select
                 id="userLocation"
+                defaultValue={"DEFAULT"}
                 {...register("userLocation", {
                   required: "Location is required.",
                 })}
-              />
+              >
+                <option value="">-- Choose a location --</option>
+                <option value="visitor">Barn 1</option>
+                <option value="farmer">Barn 2</option>
+                <option value="usda">Barn 2</option>
+                <option value="porkypigg">Barn 3</option>
+              </select>
               <p>{errors.userLocation?.message}</p>
             </div>
+
+
             <div className="label-input-group">
               <label htmlFor="category">Category</label>
               <select
@@ -223,7 +231,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                   required: "Category is required.",
                 })}
               >
-                <option value="">--Please choose an option--</option>
+                <option value="">-- Choose an option --</option>
                 <option value="visitor">Vistor</option>
                 <option value="farmer">Farmer</option>
                 <option value="usda">USDA Rep</option>

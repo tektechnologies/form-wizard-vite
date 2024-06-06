@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Form1 from './assets/Form1';
 import Form2 from './assets/Form2';
 import Form3 from './assets/Form3';
@@ -30,10 +30,8 @@ const Modal = () => {
 
   // https://typeofnan.dev/fix-the-maximum-update-depth-exceeded-error-in-react/
   const handleNext = ((data) => {
-    console.log('state on NEXT : ', data);
-
+    // console.log('state on NEXT : ', data);
     setFormData(prevFormData => ({ ...prevFormData, ...data }));
-
     setStep(step + 1);
   });
 
