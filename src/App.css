@@ -1,36 +1,36 @@
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  width: 1200px;
-  margin: 0 auto;
-  background-color: rgb(248, 248, 255);
-  /* https://fonts.google.com/selection/embed */
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+	width: 1200px;
+	margin: 0 auto;
+	background-color: rgb(248, 248, 255);
+	/* https://fonts.google.com/selection/embed */
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
+	font-style: normal;
 }
 
 h2 {
-  display: inline-block;
-  font-size: 18px;
+	display: inline-block;
+	font-size: 18px;
 }
 
 
 /* Form styles  */
 label {
-  display: table;
-  z-index: 1000;
-  margin: 0px auto;
-  /* font-size: 16px; */
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  background-color: rgb(255, 255, 255);
-  margin-bottom: -10px;
-  margin-left: 20px;
-  color: #707C8B;
+	display: table;
+	z-index: 1000;
+	margin: 0px auto;
+	/* font-size: 16px; */
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	background-color: rgb(255, 255, 255);
+	margin-bottom: -10px;
+	margin-left: 20px;
+	color: #707C8B;
 }
 
 
@@ -40,263 +40,263 @@ input[type="date"],
 input[type="time"],
 select,
 textarea {
-  border: 1px solid gray;
-  position: relative;
-  line-height: 3ex;
-  width: calc(100% - 0px);
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #cccccc;
-  border-radius: 10px;
-  box-sizing: border-box;
-  font-size: 16px;
-  color: #1F2C2A;
+	border: 1px solid gray;
+	position: relative;
+	line-height: 3ex;
+	width: calc(100% - 0px);
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #cccccc;
+	border-radius: 10px;
+	box-sizing: border-box;
+	font-size: 16px;
+	color: #1F2C2A;
 }
 
 select {
-  border: 1px solid gray;
-  width: calc(100% - 0px);
-  padding: 13px;
-  border: 1px solid #cccccc;
-  border-radius: 10px;
-  font-size: 16px;
-  color: #1F2C2A;
-  ;
+	border: 1px solid gray;
+	width: calc(100% - 0px);
+	padding: 13px;
+	border: 1px solid #cccccc;
+	border-radius: 10px;
+	font-size: 16px;
+	color: #1F2C2A;
+	;
 }
 
 form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  /* Gap between items */
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	/* Gap between items */
 }
 
 textarea {
-  width: 100%;
+	width: 100%;
 }
 
 /* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
-  transition: background-color 0s 600000s, color 0s 600000s !important;
+	transition: background-color 0s 600000s, color 0s 600000s !important;
 }
 
 
 /* css class styles  */
 
 .h2-plus-icon {
-  margin-left: 50px;
+	margin-left: 50px;
 }
 
 /* form class styles  */
 
 .form-container {
-  background-color: #ffffff;
-  padding: 50px;
-  border-radius: 8px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+	background-color: #ffffff;
+	padding: 50px;
+	border-radius: 8px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
 }
 
 .input-wrapper {
-  position: relative;
+	position: relative;
 }
 
 /* Two items per row, accounting for gap */
 .label-input-group {
-  display: flex;
-  flex-direction: column;
-  flex-basis: calc(50% - 10px);
+	display: flex;
+	flex-direction: column;
+	flex-basis: calc(50% - 10px);
 }
 
 .label-input-group p {
-  margin: -10px 0px 0px 5px;
-  color: red;
+	margin: -10px 0px 0px 5px;
+	color: red;
 }
 
 .label-textarea-group p {
-  margin: -10px 0px 0px 5px;
-  color: red;
+	margin: -10px 0px 0px 5px;
+	color: red;
 }
 
 /* text area for visit reason */
 .label-textarea-group {
-  display: flex;
-  flex-direction: column;
-  flex-basis: calc(100% - 0px);
+	display: flex;
+	flex-direction: column;
+	flex-basis: calc(100% - 0px);
 }
 
 /* text area for visit reason */
 .h2-blocklevel {
-  display: flex;
-  flex-direction: column;
-  flex-basis: calc(100% - 15px);
+	display: flex;
+	flex-direction: column;
+	flex-basis: calc(100% - 15px);
 }
 
 /* Three items per row, accounting for gap */
 .label-input-group.three-col {
-  flex-basis: calc(33.333% - 14px);
+	flex-basis: calc(33.333% - 14px);
 }
 
 /* -------------------------toggle--------https://codepen.io/mallendeo/pen/QWKrEL------------- */
 /* Hide the default checkbox */
 .toggle input {
-  display: none;
+	display: none;
 }
 
 /* Style the slider */
 .slider {
-  position: relative;
-  display: inline-block;
-  width: 100px;
-  height: 45px;
-  background-color: #ccc;
-  border-radius: 34px;
-  transition: background-color 0.3s;
+	position: relative;
+	display: inline-block;
+	width: 100px;
+	height: 45px;
+	background-color: #ccc;
+	border-radius: 34px;
+	transition: background-color 0.3s;
 }
 
 
 /* Style the circle inside the slider */
 /* Circle inside the slider */
 .slider:before {
-  position: absolute;
-  content: "No";
-  font-size: 16px;
-  width: 55px;
-  height: 35px;
-  left: 4px;
-  bottom: 5px;
-  background-color: #e75b29;
-  color: whitesmoke;
-  border-radius: 34px;
-  text-align: center;
-  line-height: 35px;
-  transition: transform 0.3s, content 0.3s;
+	position: absolute;
+	content: "No";
+	font-size: 16px;
+	width: 55px;
+	height: 35px;
+	left: 4px;
+	bottom: 5px;
+	background-color: #e75b29;
+	color: whitesmoke;
+	border-radius: 34px;
+	text-align: center;
+	line-height: 35px;
+	transition: transform 0.3s, content 0.3s;
 }
 
 /* Change background color when checked */
 .toggle input:checked+.slider {
-  background-color: #3a716c;
+	background-color: #3a716c;
 }
 
 .position-toggle {
-  margin-left: 20px;
-  margin-bottom: -10px;
+	margin-left: 20px;
+	margin-bottom: -10px;
 }
 
 /* Move the circle and change text when checked */
 .toggle input:checked+.slider:before {
-  transform: translateX(38px);
-  content: "Yes";
+	transform: translateX(38px);
+	content: "Yes";
 }
 
 /* -------------------------toggle-end-------------------- */
 
 .button-group {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 
 .next-button {
-  width: 100%;
-  height: 75px;
-  font-size: 24px;
-  color: whitesmoke;
-  background-color: #3a716c;
-  border-radius: 7px;
-  border: none;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 30px;
+	width: 100%;
+	height: 75px;
+	font-size: 24px;
+	color: whitesmoke;
+	background-color: #3a716c;
+	border-radius: 7px;
+	border: none;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 30px;
 }
 
 .next-button-50 {
-  width: 48%;
-  height: 75px;
-  font-size: 24px;
-  color: whitesmoke;
-  background-color: #3a716c;
-  border-radius: 7px;
-  border: none;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 30px;
+	width: 48%;
+	height: 75px;
+	font-size: 24px;
+	color: whitesmoke;
+	background-color: #3a716c;
+	border-radius: 7px;
+	border: none;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 30px;
 }
 
 .back-button-50 {
-  width: 48%;
-  height: 75px;
-  font-size: 24px;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 30px;
-  background-color: #E9EAEA;
-  border-radius: 7px;
-  border: none;
+	width: 48%;
+	height: 75px;
+	font-size: 24px;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 30px;
+	background-color: #E9EAEA;
+	border-radius: 7px;
+	border: none;
 }
 
 
 .color-alert {
-  font-weight: bold;
-  color: #e75b29;
-  margin-top: 0px;
+	font-weight: bold;
+	color: #e75b29;
+	margin-top: 0px;
 }
 
 /* place holder for the actual signature component  */
 .signature-div {
-  height: 150px;
-  width: 100%;
-  background-color: #cccccc74;
-  border-radius: 5px;
-  border: 3px dashed rgba(0, 0, 0, 0.15);
-  margin-bottom: 25px;
+	height: 150px;
+	width: 100%;
+	background-color: #cccccc74;
+	border-radius: 5px;
+	border: 3px dashed rgba(0, 0, 0, 0.15);
+	margin-bottom: 25px;
 }
 
 .signature-div p {
-  color: rgba(128, 128, 128, 0.61);
-  text-align: center;
-  margin-top: 60px;
+	color: rgba(128, 128, 128, 0.61);
+	text-align: center;
+	margin-top: 60px;
 }
 
 .lay-container {
-  width: 1000px;
-  margin: 0 auto;
+	width: 1000px;
+	margin: 0 auto;
 }
 
 .label-margin-bottom {
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 
 .animalWelfareInput {
-  display: flex;
-  align-items: center;
-  color: #1F2C2A;
-  font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 26px;
+	display: flex;
+	align-items: center;
+	color: #1F2C2A;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 26px;
 }
 
 .animalWelfareInput input {
-  margin-top: -45px;
-  margin-right: 15px;
-  width: 45px;
-  height: 45px;
-  border-radius: 3px;
-  cursor: pointer;
+	margin-top: -45px;
+	margin-right: 15px;
+	width: 45px;
+	height: 45px;
+	border-radius: 3px;
+	cursor: pointer;
 }
 
 .animalWelfareInput input[type='checkbox']:checked {
-  accent-color: #E75B28;
+	accent-color: #E75B28;
 }

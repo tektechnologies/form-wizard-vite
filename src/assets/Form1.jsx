@@ -45,7 +45,6 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               />
               <p>{errors.lastName?.message}</p>
             </div>
-
             <div className="label-input-group three-col">
               <label htmlFor="companyName">Company</label>
               <input
@@ -100,10 +99,8 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                 border: '1px solid rgba(0, 0, 0, 0.12)'
               }}
             />
-
             <div className="label-textarea-group">
               <h2>Visit Reason</h2>
-
               <label htmlFor="visitReason">Reason for Visit</label>
               <textarea
                 htmlFor="visitReason"
@@ -113,7 +110,9 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                   required: "Visit Reason is required.",
                 })}
               ></textarea>
-              {<p>{errors.visitReason?.message}</p>}
+              {
+                <p>{errors.visitReason?.message}</p>
+              }
             </div>
             <hr
               style={{
@@ -122,9 +121,6 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                 border: '1px solid rgba(0, 0, 0, 0.12)'
               }}
             />
-
-
-
             <div className="label-input-group">
               <h2>Tools Details</h2>
               <div className="label-margin-bottom">
@@ -141,10 +137,8 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                 </label>
               </div>
             </div>
-
             <div className="label-textarea-group">
               <label htmlFor="toolsReason">Reason for Tools</label>
-
               <textarea
                 htmlFor="toolsReason"
                 id="toolsReason"
@@ -153,9 +147,10 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                   validate: value => istoolsRequired ? value !== "" || "Tool reason is required." : true,
                 })}
               ></textarea>
-              {errors.toolReason?.message && (<p>{errors.toolReason.message}</p>)}
+              {errors.toolReason?.message && (
+                <p>{errors.toolReason.message}</p>
+              )}
             </div>
-
             <hr
               style={{
                 width: "100%",
@@ -163,7 +158,6 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                 border: '1px solid rgba(0, 0, 0, 0.12)'
               }}
             />
-
             <div className="h2-blocklevel">
               <h2>Visit Details</h2>
             </div>
@@ -179,7 +173,6 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               />
               <p>{errors.visitDate?.message}</p>
             </div>
-
             <div className="label-input-group three-col">
               <label htmlFor="startTime">Start Time</label>
               <input
@@ -190,9 +183,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                 })}
               />
               <p>{errors.startTime?.message}</p>
-
             </div>
-
             <div className="label-input-group three-col">
               <label htmlFor="endTime">End Time</label>
               <input
@@ -202,7 +193,6 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               />
               <p>{errors.endTime?.message}</p>
             </div>
-
             <div className="label-input-group">
               <label htmlFor="userLocation">Your Location</label>
               <select
@@ -220,8 +210,6 @@ const Form1 = ({ onSubmit, defaultValues }) => {
               </select>
               <p>{errors.userLocation?.message}</p>
             </div>
-
-
             <div className="label-input-group">
               <label htmlFor="category">Category</label>
               <select
@@ -246,13 +234,11 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                 border: '1px solid rgba(0, 0, 0, 0.12)'
               }}
             />
-
             <FontAwesomeIcon
               icon={faCircleExclamation}
               style={{ height: "25px", color: "#E75B29" }}
             />
             <h2 className="color-alert">ELECTRONIC DEVICES</h2>
-
             <p>
               No cell phones, cameras, audio or visual equipment, or any other
               electronic devices are permitted on the premises without written
