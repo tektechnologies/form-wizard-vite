@@ -4,8 +4,23 @@ import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 
 const Form2 = ({ onSubmit, defaultValues, handleBack }) => {
-  const { register, handleSubmit, control, formState } = useForm({ defaultValues });
+  const { register, handleSubmit, control, formState, watch } = useForm({ defaultValues });
   const { errors } = formState;
+
+  // const isanimalWelfareInput = watch('animalWelfareInput', defaultValues.animalWelfareInput);
+  // console.log('isanimalWelfareInput required: ', isanimalWelfareInput);
+
+  // const handleAnimalWelfareInputChange = (event) => {
+  //   console.log('tool reason error: ', event.target.checked);
+  //   if (!event.target.checked) {
+  //     clearErrors('animalWelfareInput');
+
+  //   }
+  // }
+
+
+
+console.log('form 2 state',formState.defaultValues);
 
   return (
     <>

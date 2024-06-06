@@ -12,7 +12,7 @@ const Modal = () => {
     emailAddress: 'bob@test.com',
     phoneNumber: '555-555-5555',
     visitForeignCountry: false,
-    visitReason: '',
+    visitReason: 'pigs',
     toolsRequired: false,
     toolReason: '',
     visitDate: '',
@@ -21,7 +21,7 @@ const Modal = () => {
     userLocation: '',
     productcategory: '',
     //second form 
-    field2: '',
+    animalWelfareInput: '',
     //third form
     field3: '',
   });
