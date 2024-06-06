@@ -22,8 +22,8 @@ const Form2 = ({ onSubmit, defaultValues, handleBack }) => {
         <div className="signature-div">
           <p>Tap To Sign</p>
         </div>
-        {/* <div className="button-group"> */}
-        <div>
+        <div className="button-group">
+        {/* <div> */}
           <button onClick={handleBack} className="back-button-50">Back</button>
           <button type="submit" className="next-button-50">Next</button>
         </div>

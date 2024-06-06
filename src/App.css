@@ -111,12 +111,6 @@ input:-webkit-autofill:focus {
   flex-basis: calc(50% - 10px);
 }
 
-.button-group {
-  display: flex;
-  flex-direction: column;
-  flex-basis: calc(50% - 15px);
-}
-
 .label-input-group p {
   margin: -10px 0px 0px 5px;
   color: red;
@@ -200,7 +194,10 @@ input:-webkit-autofill:focus {
 
 /* -------------------------toggle-end-------------------- */
 
-
+.button-group {
+  display: flex;
+  justify-content:space-between;
+}
 
 .next-button {
   width: 100%;
@@ -213,7 +210,7 @@ input:-webkit-autofill:focus {
 }
 
 .next-button-50 {
-  width: 50%;
+  width: 48%;
   height: 75px;
   font-size: 24px;
   color: whitesmoke;
@@ -223,7 +220,7 @@ input:-webkit-autofill:focus {
 }
 
 .back-button-50 {
-  width: 50%;
+  width: 48%;
   height: 75px;
   font-size: 24px;
   color: whitesmoke;
