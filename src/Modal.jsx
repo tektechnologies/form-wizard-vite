@@ -21,7 +21,7 @@ const Modal = () => {
     userLocation: '',
     productcategory: '',
     //second form 
-    animalWelfareInput: '',
+    animalWelfareInput: false,
     //third form
     field3: '',
   });

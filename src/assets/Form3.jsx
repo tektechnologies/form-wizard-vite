@@ -13,7 +13,7 @@ const Form3 = ({ onSubmit, defaultValues, handleBack }) => {
         <object type="image/svg+xml" data="file1.svg" >
           <span className="errorSpan" >Your browser does not support SVG!</span>
         </object>
- {/* <input {...register("field3")} placeholder="Field 3" /> */}
+          <input {...register("field3")} placeholder="Field 3" />
 
         <h2>Signature</h2>
         <div className="signature-div">

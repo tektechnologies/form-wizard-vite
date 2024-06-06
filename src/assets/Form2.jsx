@@ -7,12 +7,9 @@ const Form2 = ({ onSubmit, defaultValues, handleBack }) => {
   const { register, handleSubmit, control, formState } = useForm({ defaultValues });
   const { errors } = formState;
 
- 
+ console.log('checkbox bologna',formState.defaultValues['animalWelfareInput']);
   return (
-    <>
-        
-
-  
+    <>      
       <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
       <h2>Door Access System Animal Welfare Policy</h2>
         <object type="image/svg+xml" data="file.svg" >
@@ -33,11 +30,6 @@ const Form2 = ({ onSubmit, defaultValues, handleBack }) => {
               required: 'By clicking here, I state that I have read and understood the terms and conditions..'
             })}
           />
-
-
-
-
-          
           I certify, by signing the above statement, that if at any time during my visit I witness signs of animal abuse of
           neglect I will report the incident immediately to Door Access System or via the
           Door Access System Animal Welfare Hotline. If I have any questions regarding this information or something I saw, I will speak to a member of Door Access System within 24 hours.
