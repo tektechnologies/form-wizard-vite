@@ -10,7 +10,7 @@ const Modal = () => {
     lastName: 'cc',
     companyName: 'c',
     emailAddress: 'bob@test.com',
-    phoneNumber: '555-555-5555',
+    phoneNumber: '',
     visitForeignCountry: false,
     visitReason: 'pigs',
     toolsRequired: false,
