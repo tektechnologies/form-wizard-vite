@@ -17,6 +17,19 @@ const Form1 = ({ onSubmit, defaultValues }) => {
       clearErrors('toolReason');
     }
   }
+
+  React.useEffect(() => {
+    const subscription = watch((data) => {
+      console.log(data);
+    });
+    return () => {
+      subscription.unsubscribe();
+    }
+  }, []);
+
+
+
+
   console.log('errors', errors);
 
   return (
