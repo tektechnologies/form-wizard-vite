@@ -6,13 +6,13 @@ import Form3 from './assets/Form3';
 const Modal = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
-    firstName: 'c',
-    lastName: 'cc',
-    companyName: 'c',
-    emailAddress: 'bob@test.com',
+    firstName: '',
+    lastName: '',
+    companyName: '',
+    emailAddress: '',
     phoneNumber: '',
     visitForeignCountry: false,
-    visitReason: 'pigs',
+    visitReason: '',
     toolsRequired: false,
     toolReason: '',
     visitDate: '',
@@ -21,7 +21,7 @@ const Modal = () => {
     userLocation: '',
     productcategory: '',
     animalWelfareInput: false,
-    field3: '',
+    bioSecurityBreifing: false,
   });
 
   const handleNext = ((data) => {
