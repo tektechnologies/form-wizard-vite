@@ -8,6 +8,7 @@ const App = () => {
   return (
     <div>
       <button onClick={() => setIsModalOpen(true)}>Open Modal</button>
+     
       {isModalOpen && (
         <div className="modal-overlay">
           <Modal />
