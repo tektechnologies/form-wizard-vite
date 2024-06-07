@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 const Form1 = ({ onSubmit, defaultValues }) => {
-  
+
   const { register, handleSubmit, control, formState, watch, clearErrors } = useForm({ defaultValues });
   const { errors } = formState;
   const istoolsRequired = watch('toolsRequired', defaultValues.toolsRequired);
@@ -18,6 +18,20 @@ const Form1 = ({ onSubmit, defaultValues }) => {
     }
   }
 
+  React.useEffect(() => {
+    const subscription = watch((data) => {
+      console.log('capture pre submit data',data.firstName, data.lastName, data.companyName,data.emailAddress,data.phoneNumber);
+    });
+    return () => {
+      console.log('unsub')
+      subscription.unsubscribe();
+    }
+  }, []);
+
+
+
+
+  console.log('errors', errors);
 
   return (
     <>
@@ -79,6 +93,10 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                 id="phoneNumber"
                 {...register("phoneNumber", {
                   required: "Phone number is required.",
+                  pattern: {
+                    value: /^\d{3}-?\d{3}-?\d{4}$/, // Adjust the regex according to your needs
+                    message: "Invalid phone number format",
+                  },
                 })}
               />
               <p>{errors.phoneNumber?.message}</p>
