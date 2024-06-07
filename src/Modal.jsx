@@ -54,20 +54,15 @@ const Modal = () => {
   // console.log('state : ',formData);
   return (
     <div className="modal">
-      {/* updating state incase user back clicks  */}
       {step === 1 && <Form1 onSubmit={handleNext} defaultValues={formData} />}
       {step === 2 && (
         <div>
-          {/* updating state incase user back clicks  */}
           <Form2 onSubmit={handleNext} defaultValues={formData} handleBack={handleBack} />
-          {/* <button onClick={handleBack}>Back</button> */}
         </div>
       )}
       {step === 3 && (
         <div>
-          {/* manages submitting all data in state on final submit  */}
           <Form3 onSubmit={handleFinalSubmit} defaultValues={formData} handleBack={handleBack} />
-          {/* <button onClick={handleBack}>Back</button> */}
         </div>
       )}
     </div>
