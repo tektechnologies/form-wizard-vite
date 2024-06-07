@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 const Form1 = ({ onSubmit, defaultValues }) => {
-  
+
   const { register, handleSubmit, control, formState, watch, clearErrors } = useForm({ defaultValues });
   const { errors } = formState;
   const istoolsRequired = watch('toolsRequired', defaultValues.toolsRequired);
