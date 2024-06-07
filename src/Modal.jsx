@@ -20,22 +20,14 @@ const Modal = () => {
     endTime: '',
     userLocation: '',
     productcategory: '',
-    //second form 
     animalWelfareInput: false,
-    //third form
     field3: '',
   });
-
-
 
   const handleNext = ((data) => {
     setFormData(prevFormData => ({ ...prevFormData, ...data }));
     setStep(step + 1);
   });
-
-
-
-
 
   const handleBack = () => {
     setStep(step - 1);
