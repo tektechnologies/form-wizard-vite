@@ -92,6 +92,55 @@ input:-webkit-autofill:focus {
 	flex-direction: column;
 }
 
+.input-group {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.documents-checkbox-accept{
+	display: flex;
+	align-items: center;
+	color: #1F2C2A;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 26px;
+}
+
+.documents-checkbox-accept input {
+	margin-top: -15px;
+	width: 25px;
+	height: 25px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.documents-checkbox-margin input {
+	margin-top: -35px;
+	width: 25px;
+	height: 25px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.documents-checkbox-accept input[type='checkbox']:checked {
+	accent-color: #E75B28;
+}
+
+.input-group span {
+	flex: 1;
+	padding-left: 25px;
+}
+
+
+
+
+
+
+
+
 .input-wrapper {
 	position: relative;
 }
