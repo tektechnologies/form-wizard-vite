@@ -17,7 +17,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
       clearErrors('toolReason');
     }
   }
-
+  console.log('errors', errors);
 
   return (
     <>
