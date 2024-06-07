@@ -80,7 +80,7 @@ const Form1 = ({ onSubmit, defaultValues }) => {
                 {...register("phoneNumber", {
                   required: "Phone number is required.",
                   pattern: {
-                    value: /^[0-9]{10}$/, // Adjust the regex according to your needs
+                    value: /^\d{3}-?\d{3}-?\d{4}$/, // Adjust the regex according to your needs
                     message: "Invalid phone number format",
                   },
                 })}
