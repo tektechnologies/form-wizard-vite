@@ -112,6 +112,7 @@ input:-webkit-autofill:focus {
 	margin: -10px 0px 0px 5px;
 	color: red;
 }
+
 .error-alert {
 	margin: 0px 0px 0px 55px;
 	color: red;
@@ -183,6 +184,7 @@ input:-webkit-autofill:focus {
 	transform: translateX(32px);
 	content: "Yes";
 }
+
 /* -------------------------toggle-end-------------------- */
 
 .button-group {
