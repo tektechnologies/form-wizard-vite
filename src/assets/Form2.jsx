@@ -7,11 +7,10 @@ const Form2 = ({ onSubmit, defaultValues, handleBack }) => {
   const { register, handleSubmit, control, formState } = useForm({ defaultValues });
   const { errors } = formState;
 
- console.log('checkbox bologna',formState.defaultValues['animalWelfareInput']);
   return (
-    <>      
+    <>
       <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
-      <h2>Door Access System Animal Welfare Policy</h2>
+        <h2>Door Access System Animal Welfare Policy</h2>
         <object type="image/svg+xml" data="file.svg" >
           <span className="errorSpan" >Your browser does not support SVG!</span>
         </object>
