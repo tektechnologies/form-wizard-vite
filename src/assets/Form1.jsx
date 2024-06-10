@@ -17,12 +17,12 @@ import { FormContext } from "../FormContext";
 const { handleNext, formData  } = useContext(FormContext);
 console.log('form data: ?',formData);
   // const { register, handleSubmit, control, formState, watch, clearErrors } = useForm({ defaultValues });
-  const { register, handleSubmit, control, formState, watch, clearErrors } = useForm();
+  const { register, handleSubmit, control, formState, watch, clearErrors } = useForm({defaultValues: formData});
 
   const { errors } = formState;
   // const istoolsRequired = watch('toolsRequired', defaultValues.toolsRequired);
   const istoolsRequired = watch('toolsRequired', formData.toolsRequired);
-  
+
   const handleToolsRequiredChange = (event) => {
     console.log('tool reason error: ', event.target.checked);
     if (!event.target.checked) {

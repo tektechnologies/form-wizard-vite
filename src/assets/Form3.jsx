@@ -3,8 +3,10 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 
-const Form3 = ({ onSubmit, defaultValues, handleBack }) => {
-  const { register, handleSubmit, control, formState } = useForm({ defaultValues });
+// const Form3 = ({ onSubmit, defaultValues, handleBack }) => {
+const Form3 = () => {
+
+  const { register, handleSubmit, control, formState } = useForm({ defaultValues: formData });
   const { errors } = formState;
   return (
     <>
