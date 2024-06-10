@@ -7,6 +7,8 @@ import Form2 from './assets/Form2';
 import Form3 from './assets/Form3';
 
 const Modal = () => {
+  const { step } = useContext(FormContext);
+
   // const [step, setStep] = useState(1);
   // const [formData, setFormData] = useState({
   //   firstName: '',
@@ -41,6 +43,11 @@ const Modal = () => {
   // };
 
   return (
+    <div className='modal'>
+      {step === 1 && <Form1 />}
+      {step === 2 && <Form2 />}
+      {step === 3 && <Form3 />}
+    </div>
     // <div className="modal">
     //   {step === 1 && <Form1 onSubmit={handleNext} defaultValues={formData} />}
     //   {step === 2 && (
@@ -54,11 +61,12 @@ const Modal = () => {
     //     </div>
     //   )}
     // </div>
-    <>
-
-
-    </>
   );
 };
 
-export default Modal;
+// export default Modal;
+export default () => (
+  <FormProvider>
+    <Modal />
+  </FormProvider>
+);
