@@ -1,12 +1,18 @@
 // Form2.js
-import React from "react";
+import React, { useContext } from "react";
+import { FormContext } from '../FormContext';
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 
-const Form2 = ({ onSubmit, defaultValues, handleBack }) => {
-  const { register, handleSubmit, control, formState } = useForm({ defaultValues });
+// const Form2 = ({ onSubmit, defaultValues, handleBack }) => {
+  const Form2 = () => {
+  const { formData, handleNext, handleBack } = useContext(FormContext);
+  const { register, handleSubmit, control, formState } = useForm({ defaultValues: formData });
   const { errors } = formState;
 
+  const onSubmit = (data) => {
+    handleNext(data);
+  }
   return (
     <>
       <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
