@@ -1,13 +1,19 @@
 // Form3.js
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
+import { FormContext } from "../FormContext";
 
 // const Form3 = ({ onSubmit, defaultValues, handleBack }) => {
 const Form3 = () => {
-
+  const { formData, handleFinalSubmit, handleBack} = useContext(FormContext)
   const { register, handleSubmit, control, formState } = useForm({ defaultValues: formData });
   const { errors } = formState;
+
+  const onSubmit = (data) => {
+    handleFinalSubmit(data);
+  }
+
   return (
     <>
       <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
