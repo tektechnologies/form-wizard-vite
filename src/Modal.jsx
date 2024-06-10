@@ -24,8 +24,26 @@ const Modal = () => {
     bioSecurityBreifing: false,
   });
 
-  const handleNext = ((data) => {
+
+
+  // React.useEffect(() => {
+  //   const subscription = watch((data) => {
+  //     console.log('capture pre submit data',data.firstName, data.lastName, data.companyName,data.emailAddress,data.phoneNumber);
+  //   });
+  //   return () => {
+  //     console.log('unsub')
+  //     subscription.unsubscribe();
+  //   }
+  // }, []);
+
+  React.useEffect((data) => {
     setFormData(prevFormData => ({ ...prevFormData, ...data }));
+ 
+  }, []);
+
+
+  const handleNext = ((data) => {
+    // setFormData(prevFormData => ({ ...prevFormData, ...data }));
     setStep(step + 1);
   });
 
