@@ -24,13 +24,15 @@ const Modal = () => {
     bioSecurityBreifing: false,
   });
 
+
+
   const handleNext = ((data) => {
     setFormData(prevFormData => ({ ...prevFormData, ...data }));
-    setStep(step + 1);
+    setStep(prevStep => prevStep + 1);
   });
 
   const handleBack = () => {
-    setStep(step - 1);
+    setStep(prevStep => prevStep - 1);
   };
 
   const handleFinalSubmit = (data) => {

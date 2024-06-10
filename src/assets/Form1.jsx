@@ -18,21 +18,6 @@ const Form1 = ({ onSubmit, defaultValues }) => {
     }
   }
 
-  React.useEffect(() => {
-    const subscription = watch((data) => {
-      console.log('capture pre submit data',data.firstName, data.lastName, data.companyName,data.emailAddress,data.phoneNumber);
-    });
-    return () => {
-      console.log('unsub')
-      subscription.unsubscribe();
-    }
-  }, []);
-
-
-
-
-  console.log('errors', errors);
-
   return (
     <>
       <div className="lay-container">
