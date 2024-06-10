@@ -25,6 +25,7 @@ export const FormProvider = ({ children }) => {
   });
 
   const handleNext = (data) => {
+    console.log('in the NEXT render check!TTTTTTTTTTTTT');
     setFormData((prevFormData) => ({ ...prevFormData, ...data }));
     setStep((prevStep) => prevStep + 1);
   };
