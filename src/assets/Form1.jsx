@@ -1,21 +1,37 @@
 // Form1.jsx
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
-const Form1 = ({ onSubmit, defaultValues }) => {
+import { FormContext } from "../FormContext";
 
-  const { register, handleSubmit, control, formState, watch, clearErrors } = useForm({ defaultValues });
+
+// console.log(FormContext)
+
+
+// const Form1 = ({ onSubmit, defaultValues }) => {
+  const Form1 = () => {
+
+const { handleNext, formData  } = useContext(FormContext);
+console.log('form data: ?',formData);
+  // const { register, handleSubmit, control, formState, watch, clearErrors } = useForm({ defaultValues });
+  const { register, handleSubmit, control, formState, watch, clearErrors } = useForm();
+
   const { errors } = formState;
-  const istoolsRequired = watch('toolsRequired', defaultValues.toolsRequired);
-
+  // const istoolsRequired = watch('toolsRequired', defaultValues.toolsRequired);
+  const istoolsRequired = watch('toolsRequired', formData.toolsRequired);
+  
   const handleToolsRequiredChange = (event) => {
     console.log('tool reason error: ', event.target.checked);
     if (!event.target.checked) {
       clearErrors('toolReason');
     }
+  }
+
+  const onSubmit = (data) => {
+    handleNext(data);
   }
 
   return (
