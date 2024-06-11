@@ -41,7 +41,6 @@ export const FormProvider = ({ children }) => {
   };
 
   const resetForm = () => {
-    console.log("made it to the reset form.");
     setFormData(initialFormData);
     setStep(1);
   };
