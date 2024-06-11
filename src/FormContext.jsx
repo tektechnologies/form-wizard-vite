@@ -3,6 +3,14 @@ import React, { createContext, useState } from "react";
 export const FormContext = createContext();
 
 export const FormProvider = ({ children }) => {
+
+  const initialSalesFormData = {
+    firstName: '',
+    lastName: '',
+    companyName: '',
+    emailAddress: '',
+    phoneNumber: '',
+  }
   const initialFormData = {
     firstName: "",
     lastName: "",
@@ -24,7 +32,15 @@ export const FormProvider = ({ children }) => {
 
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState(initialFormData);
+  const [salesFormData, setSalesFormData] = useState(initialSalesFormData);
 
+  const handleSalesDataInput = (name, value) => {
+    setSalesFormData((prevState) => ({
+      ...prevState, 
+      [name]: value,
+    }));
+    // console.log('update sale data in state', {[name] : value});
+  }
   const handleNext = (data) => {
     setFormData((prevFormData) => ({ ...prevFormData, ...data }));
     setStep((prevStep) => prevStep + 1);
@@ -42,12 +58,13 @@ export const FormProvider = ({ children }) => {
 
   const resetForm = () => {
     setFormData(initialFormData);
+    setSalesFormData(initialSalesFormData);
     setStep(1);
   };
 
   return (
     <FormContext.Provider
-      value={{ step, formData, handleNext, handleBack, handleFinalSubmit }}
+      value={{ step, formData, salesFormData, handleSalesDataInput, handleNext, handleBack, handleFinalSubmit }}
     >
       {children}
     </FormContext.Provider>
