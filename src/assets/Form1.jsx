@@ -1,5 +1,5 @@
 // Form1.jsx
-import React, { useContext, memo } from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,7 +7,7 @@ import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 import { FormContext } from "../FormContext";
 
-const Form1 = memo(() => {
+const Form1 = () => {
   const { handleNext, formData } = useContext(FormContext);
   console.log("react always runs twice", formData);
   const { register, handleSubmit, control, formState, watch, clearErrors } =
@@ -271,6 +271,6 @@ const Form1 = memo(() => {
       <DevTool control={control} />
     </>
   );
-});
+};
 
 export default Form1;
