@@ -1,6 +1,6 @@
 import React, { useContext} from "react";
 import { useForm } from "react-hook-form";
-// import { DevTool } from "@hookform/devtools";
+import { DevTool } from "@hookform/devtools";
 import { FormContext } from "../FormContext";
 
 const Form3 = () => {
@@ -65,7 +65,7 @@ const Form3 = () => {
           </button>
         </div>
       </form>
-      {/* <DevTool control={control} /> */}
+      <DevTool control={control} />
     </>
   );
 };
