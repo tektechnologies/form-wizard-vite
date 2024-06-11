@@ -1,4 +1,3 @@
-// Form2.js
 import React, { useContext } from "react";
 import { FormContext } from "../FormContext";
 import { useForm } from "react-hook-form";
