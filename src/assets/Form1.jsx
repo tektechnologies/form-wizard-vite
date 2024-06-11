@@ -1,5 +1,5 @@
 // Form1.jsx
-import React, { useContext} from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,33 +7,24 @@ import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 import { FormContext } from "../FormContext";
 
-
-// console.log(FormContext)
-
-
-// const Form1 = ({ onSubmit, defaultValues }) => {
-  const Form1 = () => {
-
-const { handleNext, formData  } = useContext(FormContext);
-console.log('form data: ?',formData);
-  // const { register, handleSubmit, control, formState, watch, clearErrors } = useForm({ defaultValues });
-  const { register, handleSubmit, control, formState, watch, clearErrors } = useForm({defaultValues: formData});
-
+const Form1 = () => {
+  const { handleNext, formData } = useContext(FormContext);
+  console.log("react always runs twice", formData);
+  const { register, handleSubmit, control, formState, watch, clearErrors } =
+    useForm({ defaultValues: formData });
   const { errors } = formState;
-  // const istoolsRequired = watch('toolsRequired', defaultValues.toolsRequired);
-  const istoolsRequired = watch('toolsRequired', formData.toolsRequired);
+  const istoolsRequired = watch("toolsRequired", formData.toolsRequired);
 
   const handleToolsRequiredChange = (event) => {
-    console.log('tool reason error: ', event.target.checked);
+    console.log("tool reason error: ", event.target.checked);
     if (!event.target.checked) {
-      clearErrors('toolReason');
+      clearErrors("toolReason");
     }
-  }
+  };
 
   const onSubmit = (data) => {
     handleNext(data);
-  }
-
+  };
 
   return (
     <>
@@ -57,7 +48,9 @@ console.log('form data: ?',formData);
               <input
                 type="text"
                 id="lastName"
-                {...register("lastName", { required: "Last name is required." })}
+                {...register("lastName", {
+                  required: "Last name is required.",
+                })}
               />
               <p>{errors.lastName?.message}</p>
             </div>
@@ -116,7 +109,7 @@ console.log('form data: ?',formData);
               style={{
                 width: "100%",
                 color: "grey",
-                border: '1px solid rgba(0, 0, 0, 0.12)'
+                border: "1px solid rgba(0, 0, 0, 0.12)",
               }}
             />
             <div className="label-textarea-group">
@@ -130,15 +123,13 @@ console.log('form data: ?',formData);
                   required: "Visit Reason is required.",
                 })}
               ></textarea>
-              {
-                <p>{errors.visitReason?.message}</p>
-              }
+              {<p>{errors.visitReason?.message}</p>}
             </div>
             <hr
               style={{
                 width: "100%",
                 color: "grey",
-                border: '1px solid rgba(0, 0, 0, 0.12)'
+                border: "1px solid rgba(0, 0, 0, 0.12)",
               }}
             />
             <div className="label-input-group">
@@ -150,7 +141,7 @@ console.log('form data: ?',formData);
                     type="checkbox"
                     id="toolsRequired"
                     {...register("toolsRequired", {
-                      onChange: handleToolsRequiredChange
+                      onChange: handleToolsRequiredChange,
                     })}
                   />
                   <span className="slider position-toggle"></span>
@@ -164,18 +155,19 @@ console.log('form data: ?',formData);
                 id="toolsReason"
                 rows="4"
                 {...register("toolReason", {
-                  validate: value => istoolsRequired ? value !== "" || "Tool reason is required." : true,
+                  validate: (value) =>
+                    istoolsRequired
+                      ? value !== "" || "Tool reason is required."
+                      : true,
                 })}
               ></textarea>
-              {errors.toolReason?.message && (
-                <p>{errors.toolReason.message}</p>
-              )}
+              {errors.toolReason?.message && <p>{errors.toolReason.message}</p>}
             </div>
             <hr
               style={{
                 width: "100%",
                 color: "grey",
-                border: '1px solid rgba(0, 0, 0, 0.12)'
+                border: "1px solid rgba(0, 0, 0, 0.12)",
               }}
             />
             <div className="h2-blocklevel">
@@ -251,7 +243,7 @@ console.log('form data: ?',formData);
               style={{
                 width: "100%",
                 color: "grey",
-                border: '1px solid rgba(0, 0, 0, 0.12)'
+                border: "1px solid rgba(0, 0, 0, 0.12)",
               }}
             />
             <FontAwesomeIcon
