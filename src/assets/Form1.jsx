@@ -7,7 +7,7 @@ import barns from "./barns.json";
 import { FormContext } from "../FormContext";
 
 const Form1 = () => {
-  const { handleNext, formData, salesFormData, handleSalesDataInput } =
+  const { handleNext, formData, handleSalesDataInput } =
     useContext(FormContext);
   // console.log("function: ", salesFormData);
   // console.log("react always runs twice", formData);
