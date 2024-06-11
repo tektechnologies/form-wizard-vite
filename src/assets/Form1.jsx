@@ -1,7 +1,7 @@
 // Form1.jsx
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { DevTool } from "@hookform/devtools";
+// import { DevTool } from "@hookform/devtools";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
@@ -157,7 +157,7 @@ const Form1 = () => {
                 {...register("toolReason", {
                   validate: (value) =>
                     istoolsRequired
-                      ? value !== "" || "Tool reason is required."
+                      ? value.trim() !== "" || "Tool reason is required."
                       : true,
                 })}
               ></textarea>
@@ -268,7 +268,7 @@ const Form1 = () => {
           </form>
         </div>
       </div>
-      <DevTool control={control} />
+      {/* <DevTool control={control} /> */}
     </>
   );
 };

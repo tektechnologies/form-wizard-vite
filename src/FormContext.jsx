@@ -26,6 +26,7 @@ export const FormProvider = ({ children }) => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState(initialFormData);
 
+  
   const handleNext = (data) => {
     setFormData((prevFormData) => ({ ...prevFormData, ...data }));
     setStep((prevStep) => prevStep + 1);
