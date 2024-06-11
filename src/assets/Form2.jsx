@@ -1,4 +1,4 @@
-import React, { useContext, memo } from "react";
+import React, { useContext } from "react";
 import { FormContext } from "../FormContext";
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
