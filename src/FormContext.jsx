@@ -39,7 +39,6 @@ export const FormProvider = ({ children }) => {
       ...prevState, 
       [name]: value,
     }));
-    // console.log('update sale data in state', {[name] : value});
   }
   const handleNext = (data) => {
     setFormData((prevFormData) => ({ ...prevFormData, ...data }));

@@ -7,11 +7,10 @@ import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import barns from "./barns.json";
 import { FormContext } from "../FormContext";
 
-
-
 const Form1 = () => {
-  const { handleNext, formData, salesFormData, handleSalesDataInput } = useContext(FormContext);
-  console.log('function: ', salesFormData);
+  const { handleNext, formData, salesFormData, handleSalesDataInput } =
+    useContext(FormContext);
+  // console.log("function: ", salesFormData);
   // console.log("react always runs twice", formData);
   const {
     register,
@@ -23,9 +22,6 @@ const Form1 = () => {
   } = useForm({ defaultValues: formData });
   const istoolsRequired = watch("toolsRequired", formData.toolsRequired);
 
-
-
-  
   const handleToolsRequiredChange = (event) => {
     console.log("tool reason error: ", event.target.checked);
     if (!event.target.checked) {
@@ -33,10 +29,9 @@ const Form1 = () => {
     }
   };
 
-const handleInputChange = (event) => {
-  // console.log("Input changed: ", event.target.name, event.target.value);
-  handleSalesDataInput(event.target.name, event.target.value);
-}
+  const handleInputChange = (event) => {
+    handleSalesDataInput(event.target.name, event.target.value);
+  };
 
   const onSubmit = (data) => {
     handleNext(data);
