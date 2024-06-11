@@ -3,7 +3,7 @@ import { FormContext } from "../FormContext";
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 
-const Form2 = memo(() => {
+const Form2 = () => {
   const { formData, handleNext, handleBack } = useContext(FormContext);
   const { register, handleSubmit, control, formState } = useForm({
     defaultValues: formData,
@@ -67,6 +67,6 @@ const Form2 = memo(() => {
       <DevTool control={control} />
     </>
   );
-});
+};
 
 export default Form2;
