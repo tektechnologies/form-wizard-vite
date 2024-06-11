@@ -151,7 +151,6 @@ const Form1 = () => {
             <div className="label-textarea-group">
               <label htmlFor="toolsReason">Reason for Tools</label>
               <textarea
-                htmlFor="toolsReason"
                 id="toolsReason"
                 rows="4"
                 {...register("toolReason", {
