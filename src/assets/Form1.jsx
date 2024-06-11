@@ -8,8 +8,10 @@ import barns from "./barns.json";
 import { FormContext } from "../FormContext";
 
 const Form1 = () => {
-  const { handleNext, formData } = useContext(FormContext);
-  console.log("react always runs twice", formData);
+  const { handleNext, formData, salesFormData, handleSalesDataInput } =
+    useContext(FormContext);
+  // console.log("function: ", salesFormData);
+  // console.log("react always runs twice", formData);
   const {
     register,
     handleSubmit,
@@ -25,6 +27,10 @@ const Form1 = () => {
     if (!event.target.checked) {
       clearErrors("toolReason");
     }
+  };
+
+  const handleInputChange = (event) => {
+    handleSalesDataInput(event.target.name, event.target.value);
   };
 
   const onSubmit = (data) => {
@@ -44,6 +50,7 @@ const Form1 = () => {
                 id="firstName"
                 {...register("firstName", {
                   required: "User name is required.",
+                  onChange: handleInputChange,
                 })}
               />
               <p>{errors.firstName?.message}</p>
@@ -55,6 +62,7 @@ const Form1 = () => {
                 id="lastName"
                 {...register("lastName", {
                   required: "Last name is required.",
+                  onChange: handleInputChange,
                 })}
               />
               <p>{errors.lastName?.message}</p>
@@ -66,6 +74,7 @@ const Form1 = () => {
                 id="companyName"
                 {...register("companyName", {
                   required: "Company name is required.",
+                  onChange: handleInputChange,
                 })}
               />
               <p>{errors.companyName?.message}</p>
@@ -82,6 +91,7 @@ const Form1 = () => {
                     message: "Invalid Email",
                   },
                   required: "Email is required.",
+                  onChange: handleInputChange,
                 })}
               />
               <p>{errors.emailAddress?.message}</p>
@@ -97,6 +107,7 @@ const Form1 = () => {
                     value: /^\d{3}-?\d{3}-?\d{4}$/, // Adjust the regex according to your needs
                     message: "Invalid phone number format",
                   },
+                  onChange: handleInputChange,
                 })}
               />
               <p>{errors.phoneNumber?.message}</p>
