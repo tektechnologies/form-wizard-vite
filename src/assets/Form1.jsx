@@ -1,7 +1,7 @@
 // Form1.jsx
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
-// import { DevTool } from "@hookform/devtools";
+import { DevTool } from "@hookform/devtools";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
@@ -115,7 +115,6 @@ const Form1 = () => {
               <h2>Visit Reason</h2>
               <label htmlFor="visitReason">Reason for Visit</label>
               <textarea
-                htmlFor="visitReason"
                 id="visitReason"
                 rows="4"
                 {...register("visitReason", {
@@ -266,7 +265,7 @@ const Form1 = () => {
           </form>
         </div>
       </div>
-      {/* <DevTool control={control} /> */}
+      <DevTool control={control} />
     </>
   );
 };
