@@ -4,15 +4,20 @@ import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
-
+import barns from "./barns.json";
 import { FormContext } from "../FormContext";
 
 const Form1 = () => {
   const { handleNext, formData } = useContext(FormContext);
   console.log("react always runs twice", formData);
-  const { register, handleSubmit, control, formState, watch, clearErrors } =
-    useForm({ defaultValues: formData });
-  const { errors } = formState;
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { errors },
+    watch,
+    clearErrors,
+  } = useForm({ defaultValues: formData });
   const istoolsRequired = watch("toolsRequired", formData.toolsRequired);
 
   const handleToolsRequiredChange = (event) => {
@@ -116,7 +121,6 @@ const Form1 = () => {
               <h2>Visit Reason</h2>
               <label htmlFor="visitReason">Reason for Visit</label>
               <textarea
-                htmlFor="visitReason"
                 id="visitReason"
                 rows="4"
                 {...register("visitReason", {
@@ -151,13 +155,12 @@ const Form1 = () => {
             <div className="label-textarea-group">
               <label htmlFor="toolsReason">Reason for Tools</label>
               <textarea
-                htmlFor="toolsReason"
                 id="toolsReason"
                 rows="4"
                 {...register("toolReason", {
                   validate: (value) =>
                     istoolsRequired
-                      ? value !== "" || "Tool reason is required."
+                      ? value.trim() !== "" || "Tool reason is required."
                       : true,
                 })}
               ></textarea>
@@ -205,6 +208,7 @@ const Form1 = () => {
               />
               <p>{errors.endTime?.message}</p>
             </div>
+
             <div className="label-input-group">
               <label htmlFor="userLocation">Your Location</label>
               <select
@@ -214,11 +218,14 @@ const Form1 = () => {
                   required: "Location is required.",
                 })}
               >
-                <option value="">-- Choose a Location --</option>
-                <option value="barn-one">Barn 1</option>
-                <option value="barn-two">Barn 2</option>
-                <option value="barn-three">Barn 3</option>
-                <option value="barn-four">Barn 4</option>
+                <option value="" disabled>
+                  -- Choose a Location --
+                </option>
+                {barns.map((barnName) => (
+                  <option key={barnName.id} value={barnName.value}>
+                    {barnName.label}
+                  </option>
+                ))}
               </select>
               <p>{errors.userLocation?.message}</p>
             </div>
@@ -235,7 +242,7 @@ const Form1 = () => {
                 <option value="visitor">Vistor</option>
                 <option value="farmer">Farmer</option>
                 <option value="usda">USDA Rep</option>
-                <option value="porkypigg">Porky Pig</option>
+                <option value="porkypigg">Kevin Bacon</option>
               </select>
               <p>{errors.productcategory?.message}</p>
             </div>

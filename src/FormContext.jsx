@@ -3,7 +3,6 @@ import React, { createContext, useState } from "react";
 export const FormContext = createContext();
 
 export const FormProvider = ({ children }) => {
- 
   const initialFormData = {
     firstName: "",
     lastName: "",
@@ -42,7 +41,6 @@ export const FormProvider = ({ children }) => {
   };
 
   const resetForm = () => {
-    console.log("made it to the reset form.");
     setFormData(initialFormData);
     setStep(1);
   };
