@@ -4,16 +4,20 @@ import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
-import barns from './barns.json';
+import barns from "./barns.json";
 import { FormContext } from "../FormContext";
-
-console.log(barns);
 
 const Form1 = () => {
   const { handleNext, formData } = useContext(FormContext);
   console.log("react always runs twice", formData);
-  const { register, handleSubmit, control, formState: {errors}, watch, clearErrors } =
-    useForm({ defaultValues: formData });
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { errors },
+    watch,
+    clearErrors,
+  } = useForm({ defaultValues: formData });
   const istoolsRequired = watch("toolsRequired", formData.toolsRequired);
 
   const handleToolsRequiredChange = (event) => {
@@ -205,19 +209,6 @@ const Form1 = () => {
               <p>{errors.endTime?.message}</p>
             </div>
 
-            {/* <select
-          id="category"
-          defaultValue={""}
-          {...register("productcategory", {
-            required: "Category is required.",
-          })}
-        >
-          <option value="" disabled>-- Choose an Option --</option>
-          {categories.map((category) => (
-            <option key={category.id} value={category.value}>{category.label}</option>
-          ))}
-        </select>
-        <p>{errors.productcategory?.message}</p> */}
             <div className="label-input-group">
               <label htmlFor="userLocation">Your Location</label>
               <select
@@ -227,13 +218,13 @@ const Form1 = () => {
                   required: "Location is required.",
                 })}
               >
-                <option value="" disabled>-- Choose a Location --</option>
-                {/* <option value="barn-one">Barn 1</option>
-                <option value="barn-two">Barn 2</option>
-                <option value="barn-three">Barn 3</option>
-                <option value="barn-four">Barn 4</option> */}
+                <option value="" disabled>
+                  -- Choose a Location --
+                </option>
                 {barns.map((barnName) => (
-                  <option key={barnName.id} value={barnName.value}>{barnName.label}</option>
+                  <option key={barnName.id} value={barnName.value}>
+                    {barnName.label}
+                  </option>
                 ))}
               </select>
               <p>{errors.userLocation?.message}</p>
