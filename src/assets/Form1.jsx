@@ -10,9 +10,8 @@ import { FormContext } from "../FormContext";
 const Form1 = () => {
   const { handleNext, formData } = useContext(FormContext);
   console.log("react always runs twice", formData);
-  const { register, handleSubmit, control, formState, watch, clearErrors } =
+  const { register, handleSubmit, control, formState: {errors}, watch, clearErrors } =
     useForm({ defaultValues: formData });
-  const { errors } = formState;
   const istoolsRequired = watch("toolsRequired", formData.toolsRequired);
 
   const handleToolsRequiredChange = (event) => {
