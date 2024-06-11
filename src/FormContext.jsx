@@ -1,9 +1,8 @@
-import React, { createContext, useState} from "react";
+import React, { createContext, useState } from "react";
 
 export const FormContext = createContext();
 
 export const FormProvider = ({ children }) => {
- 
   const initialFormData = {
     firstName: "",
     lastName: "",
@@ -26,7 +25,6 @@ export const FormProvider = ({ children }) => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState(initialFormData);
 
-  
   const handleNext = (data) => {
     setFormData((prevFormData) => ({ ...prevFormData, ...data }));
     setStep((prevStep) => prevStep + 1);
