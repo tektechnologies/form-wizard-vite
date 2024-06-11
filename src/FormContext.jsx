@@ -1,4 +1,4 @@
-import React, { createContext, useState, memo } from "react";
+import React, { createContext, useState} from "react";
 
 export const FormContext = createContext();
 
@@ -55,4 +55,3 @@ export const FormProvider = ({ children }) => {
     </FormContext.Provider>
   );
 };
-export const MemoizedFormProvider = memo(FormProvider);
