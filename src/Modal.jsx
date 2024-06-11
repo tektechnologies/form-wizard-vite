@@ -1,10 +1,10 @@
-import React, { useContext, memo } from 'react';
+import React, { useContext } from 'react';
 import { FormProvider, FormContext } from './FormContext';
 import Form1 from './assets/Form1';
 import Form2 from './assets/Form2';
 import Form3 from './assets/Form3';
 
-const Modal = memo(() => {
+const Modal = () => {
   const { step } = useContext(FormContext);
 
   return (
@@ -14,7 +14,7 @@ const Modal = memo(() => {
       {step === 3 && <Form3 />}
     </div>
   );
-});
+};
 
 export default () => (
   <FormProvider>
