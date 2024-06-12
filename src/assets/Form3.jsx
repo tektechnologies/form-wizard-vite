@@ -17,8 +17,10 @@ const Form3 = () => {
   return (
     <>
       <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
-        <h2>Door Access System Biosecurity Breifing</h2>
-
+        <h1>Door Access System Biosecurity Breifing</h1>
+        <h2>A VISITOR REQUEST MUST BE COMPLETED AND APPROVED PRIOR TO YOUR VISIT</h2>
+        <p>All visitors are required to adhere to Door Access System biosecurity procedures. Violations, intentional or
+          due to negligence, may require Brenneman Pork to terminate services and/or privileges. Please seek immediate guidance in the event biosecurity restrictions are unclear</p>
         {/* <object type="image/svg+xml" data="file1.svg">
           <span className="errorSpan">Your browser does not support SVG!</span>
         </object> */}
