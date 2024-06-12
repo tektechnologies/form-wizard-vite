@@ -15,6 +15,7 @@ const Form2 = () => {
   };
   return (
     <>
+     <div className="lay-container">
       <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
         <h1>Door Access System Animal Welfare Policy</h1>
         <object type="image/svg+xml" data="file.svg">
@@ -64,6 +65,7 @@ const Form2 = () => {
           </button>
         </div>
       </form>
+      </div>
       <DevTool control={control} />
     </>
   );

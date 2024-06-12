@@ -16,6 +16,7 @@ const Form3 = () => {
 
   return (
     <>
+     <div className="lay-container">
       <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
         <h1>Door Access System Biosecurity Breifing</h1>
         <h2>A VISITOR REQUEST MUST BE COMPLETED AND APPROVED PRIOR TO YOUR VISIT</h2>
@@ -115,6 +116,7 @@ const Form3 = () => {
           </button>
         </div>
       </form>
+      </div>
       <DevTool control={control} />
     </>
   );
