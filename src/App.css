@@ -14,19 +14,18 @@ h1 {
 }
 
 h2 {
-	/* Personal Details */
+	display: inline-block;
+	font-size: 18px;
+	font-weight: bold;
 	font-family: 'Poppins';
 	font-style: normal;
 	font-weight: 500;
 	font-size: 18px;
-	line-height: 135%;
-	/* or 24px */
-	margin-bottom: -15px;
+	margin-bottom: -10px;
 	color: #000000;
 }
 
 .request-form-h2 {
-	/* Personal Details */
 	font-family: 'Poppins';
 	font-style: normal;
 	font-weight: 500;
@@ -45,13 +44,6 @@ body {
 	font-weight: 300;
 	font-style: normal;
 }
-
-h2 {
-	display: inline-block;
-	font-size: 18px;
-	font-weight: bold;
-}
-
 
 
 /* Form styles  */
@@ -398,6 +390,36 @@ input:-webkit-autofill:focus {
 	font-size: 16px;
 	line-height: 26px;
 	/* or 162% */
-
+	margin-left: 35px;
 	color: #2A2A2A;
 }
+
+
+
+.ellipse {
+	margin-right: 10px;
+	width: 24px;
+	height: 24px;
+	background-color: #2C615C;
+	border-radius: 50%;
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 16px;
+	text-align: center;
+	color: #FFFFFF; 
+	display: inline-block;
+	line-height: 24px; /* Center the text vertically */
+	vertical-align: middle; /* Align the span with other elements if needed */
+	position: relative; /* For absolute positioning of the number */
+}
+
+
+.container {
+	display: flex;
+	align-items: center;
+  }
+  .container h2 {
+	margin-top: -10px;
+  }

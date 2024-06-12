@@ -19,9 +19,19 @@ const Form3 = () => {
      <div className="lay-container">
       <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
         <h1>Door Access System Biosecurity Breifing</h1>
-        <h2>A VISITOR REQUEST MUST BE COMPLETED AND APPROVED PRIOR TO YOUR VISIT</h2>
+
+
+        <div className="container">
+       <span className="ellipse">1</span> 
+       <h2>A VISITOR REQUEST MUST BE COMPLETED AND APPROVED PRIOR TO YOUR VISIT</h2>
+       </div>
         <p className="document-para">All visitors are required to adhere to Door Access System biosecurity procedures. Violations, intentional or
           due to negligence, may require Brenneman Pork to terminate services and/or privileges. Please seek immediate guidance in the event biosecurity restrictions are unclear</p>
+          
+
+
+
+
         <h2>DOWNTIME REQUIREMENTS</h2>
         <p className="document-para">
           Door Access System observes different downtimes based on exposure to different health status’ and phases of
