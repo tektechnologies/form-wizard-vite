@@ -38,13 +38,13 @@ export const FormProvider = ({ children }) => {
     return Object.values(data).every(value => value !== '');
   }
 
-  if(isSalesFormDataComplete(salesFormData)){
+  if (isSalesFormDataComplete(salesFormData)) {
     console.log('sales form data completed!', salesFormData);
   }
 
   const handleSalesDataInput = (name, value) => {
     setSalesFormData((prevState) => ({
-      ...prevState, 
+      ...prevState,
       [name]: value,
     }));
   }

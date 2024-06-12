@@ -99,7 +99,7 @@ input:-webkit-autofill:focus {
 	gap: 20px;
 }
 
-.documents-checkbox-accept{
+.documents-checkbox-accept {
 	display: flex;
 	align-items: center;
 	color: #1F2C2A;
