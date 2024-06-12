@@ -40,7 +40,7 @@ const Form1 = () => {
     <>
       <div className="lay-container">
         <div className="form-container">
-          <h2>Personal Details</h2>
+          <h1>Personal Details</h1>
           <form onSubmit={handleSubmit(onSubmit)} noValidate>
             <div className="label-input-group three-col">
               <label htmlFor="firstName">First Name</label>

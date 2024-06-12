@@ -16,7 +16,7 @@ const Form2 = () => {
   return (
     <>
       <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
-        <h2>Door Access System Animal Welfare Policy</h2>
+        <h1>Door Access System Animal Welfare Policy</h1>
         <object type="image/svg+xml" data="file.svg">
           <span className="errorSpan">Your browser does not support SVG!</span>
         </object>
