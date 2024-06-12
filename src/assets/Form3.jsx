@@ -19,9 +19,9 @@ const Form3 = () => {
       <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
         <h2>Door Access System Biosecurity Breifing</h2>
 
-        <object type="image/svg+xml" data="file1.svg">
+        {/* <object type="image/svg+xml" data="file1.svg">
           <span className="errorSpan">Your browser does not support SVG!</span>
-        </object>
+        </object> */}
         <hr
           style={{
             width: "100%",
