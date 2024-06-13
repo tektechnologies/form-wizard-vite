@@ -1,5 +1,39 @@
 * {
-	/* box-sizing: border-box; */
+	box-sizing: border-box;
+}
+
+h1 {
+	/* Door Access System Biosecurity Briefing */
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 36px;
+	color: #2A2A2A;
+	margin-bottom: 20px;
+}
+
+h2 {
+	display: inline-block;
+	font-size: 18px;
+	font-weight: bold;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	margin-bottom: -10px;
+	color: #000000;
+}
+
+.request-form-h2 {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 135%;
+	/* or 24px */
+	margin-bottom: 15px;
+	color: #000000;
 }
 
 body {
@@ -9,11 +43,6 @@ body {
 	font-family: "Poppins", sans-serif;
 	font-weight: 300;
 	font-style: normal;
-}
-
-h2 {
-	display: inline-block;
-	font-size: 18px;
 }
 
 
@@ -26,7 +55,7 @@ label {
 	font-weight: 400;
 	font-size: 14px;
 	background-color: rgb(255, 255, 255);
-	margin-bottom: -10px;
+	margin-bottom: -6px;
 	margin-left: 20px;
 	color: #707C8B;
 }
@@ -99,7 +128,11 @@ input:-webkit-autofill:focus {
 	gap: 20px;
 }
 
-.documents-checkbox-accept{
+.form3-checkbox-margin {
+	margin-left: 0px;
+}
+
+.documents-checkbox-accept {
 	display: flex;
 	align-items: center;
 	color: #1F2C2A;
@@ -110,18 +143,19 @@ input:-webkit-autofill:focus {
 	line-height: 26px;
 }
 
+
 .documents-checkbox-accept input {
 	margin-top: -15px;
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	border-radius: 3px;
 	cursor: pointer;
 }
 
 .documents-checkbox-margin input {
-	margin-top: -60px;
-	width: 25px;
-	height: 25px;
+	margin-top: -65px;
+	width: 20px;
+	height: 20px;
 	border-radius: 3px;
 	cursor: pointer;
 }
@@ -196,7 +230,7 @@ input:-webkit-autofill:focus {
 	position: relative;
 	display: inline-block;
 	width: 90px;
-	height: 32px;
+	height: 31.5px;
 	background-color: #ccc;
 	border-radius: 34px;
 	transition: background-color 0.3s;
@@ -310,7 +344,7 @@ input:-webkit-autofill:focus {
 }
 
 .lay-container {
-	width: 1000px;
+	width: 1200px;
 	margin: 0 auto;
 }
 
@@ -352,4 +386,108 @@ input:-webkit-autofill:focus {
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 26px;
+	font-family: 'Poppins';
+}
+
+.document-para {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 26px;
+	/* or 162% */
+	margin-left: 35px;
+	color: #2A2A2A;
+	margin-top: -15px;
+}
+
+.form-2-list-items {
+	width: 88%;
+	margin:0;
+	margin-left: 5px;
+}
+
+.numbered-section-margin {
+	margin-left: 33px;
+}
+
+.numbered-section-margin .ellipse {
+	margin-top: -20px;
+}
+
+.last-span-item {
+	margin-bottom: -20px;
+}
+.ellipse {
+	margin-right: 10px;
+	width: 24px;
+	height: 24px;
+	background-color: #2C615C;
+	border-radius: 50%;
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 16px;
+	text-align: center;
+	color: #FFFFFF;
+	display: inline-block;
+	line-height: 25px;
+	/* Center the text vertically */
+	vertical-align: middle;
+	/* Align the span with other elements if needed */
+	position: relative;
+	/* For absolute positioning of the number */
+}
+
+
+.container {
+	display: flex;
+	align-items: center;
+}
+
+.container h2 {
+	margin-top: -10px;
+}
+
+.bold-text-span {
+	font-size: 18px;
+	font-weight: 500;
+	color: #2A2A2A;
+}
+
+.orange-text-h2 {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+	text-transform: uppercase;
+	color: #E75B28;
+}
+
+/* unvisited link */
+a:link {
+	color: rgb(22, 147, 232);
+}
+
+/* visited link */
+a:visited {
+	color: rgb(22, 147, 232);
+}
+
+/* mouse over link */
+a:hover {
+	color: #E75B28;
+}
+
+/* selected link */
+a:active {
+	color: rgb(22, 147, 255);
+}
+
+.section-width-paragraphs {
+	width: 88%;
+}
+.section-width-paragraphs p{
+	margin-bottom: 50px;
 }

@@ -11,3 +11,4 @@ Currently, two official plugins are available:
 - /*<https://fonts.google.com/selection/embed>*/
 - /*<https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied>*/
 - /*-toggle--------<https://codepen.io/mallendeo/pen/QWKrEL------------->*/
+- <https://cdnjs.com/libraries/meyer-reset>

@@ -40,7 +40,7 @@ const Form1 = () => {
     <>
       <div className="lay-container">
         <div className="form-container">
-          <h2>Personal Details</h2>
+          <h1>Personal Details</h1>
           <form onSubmit={handleSubmit(onSubmit)} noValidate>
             <div className="label-input-group three-col">
               <label htmlFor="firstName">First Name</label>
@@ -128,7 +128,7 @@ const Form1 = () => {
               }}
             />
             <div className="label-textarea-group">
-              <h2>Visit Reason</h2>
+              <h2 className="request-form-h2">Visit Reason</h2>
               <label htmlFor="visitReason">Reason for Visit</label>
               <textarea
                 id="visitReason"
@@ -147,7 +147,7 @@ const Form1 = () => {
               }}
             />
             <div className="label-input-group">
-              <h2>Tools Details</h2>
+              <h2 className="request-form-h2">Tools Details</h2>
               <div className="label-margin-bottom">
                 <label htmlFor="toolsRequired" className="toggle">
                   Tools Required
@@ -184,7 +184,7 @@ const Form1 = () => {
               }}
             />
             <div className="h2-blocklevel">
-              <h2>Visit Details</h2>
+              <h2 className="request-form-h2">Visit Details</h2>
             </div>
             <div className="label-input-group three-col">
               <label htmlFor="visitDate">Visit Date</label>
