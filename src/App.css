@@ -225,7 +225,7 @@ input:-webkit-autofill:focus {
 	position: relative;
 	display: inline-block;
 	width: 90px;
-	height: 32px;
+	height: 31.5px;
 	background-color: #ccc;
 	border-radius: 34px;
 	transition: background-color 0.3s;
