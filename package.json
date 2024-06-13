@@ -15,7 +15,9 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hook-form": "^7.51.5"
+    "react-hook-form": "^7.51.5",
+    "react-router": "^6.23.1",
+    "react-router-dom": "^6.23.1"
   },
   "devDependencies": {
     "@hookform/devtools": "^4.3.1",
@@ -28,8 +30,8 @@
     "eslint-plugin-react-refresh": "^0.4.6",
     "vite": "^5.2.0"
   },
-    "rules": {
-      "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "warn"
-      }
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  }
 }
