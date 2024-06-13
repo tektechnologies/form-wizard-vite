@@ -400,8 +400,23 @@ input:-webkit-autofill:focus {
 	margin-top: -15px;
 }
 
+.form-2-list-items {
+	width: 88%;
+	margin:0;
+	margin-left: 5px;
+}
 
+.numbered-section-margin {
+	margin-left: 33px;
+}
 
+.numbered-section-margin .ellipse {
+	margin-top: -20px;
+}
+
+.last-span-item {
+	margin-bottom: -20px;
+}
 .ellipse {
 	margin-right: 10px;
 	width: 24px;
@@ -416,7 +431,7 @@ input:-webkit-autofill:focus {
 	text-align: center;
 	color: #FFFFFF;
 	display: inline-block;
-	line-height: 24px;
+	line-height: 25px;
 	/* Center the text vertically */
 	vertical-align: middle;
 	/* Align the span with other elements if needed */
@@ -468,4 +483,11 @@ a:hover {
 /* selected link */
 a:active {
 	color: rgb(22, 147, 255);
+}
+
+.section-width-paragraphs {
+	width: 88%;
+}
+.section-width-paragraphs p{
+	margin-bottom: 50px;
 }
