@@ -10,7 +10,7 @@ h1 {
 	font-size: 24px;
 	line-height: 36px;
 	color: #2A2A2A;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
 
 h2 {
@@ -19,7 +19,7 @@ h2 {
 	font-weight: bold;
 	font-family: 'Poppins';
 	font-style: normal;
-	font-weight: 500;
+	font-weight: 700;
 	font-size: 18px;
 	margin-bottom: -10px;
 	color: #000000;
@@ -128,6 +128,10 @@ input:-webkit-autofill:focus {
 	gap: 20px;
 }
 
+.form3-checkbox-margin {
+	margin-left: 0px;
+}
+
 .documents-checkbox-accept {
 	display: flex;
 	align-items: center;
@@ -139,18 +143,19 @@ input:-webkit-autofill:focus {
 	line-height: 26px;
 }
 
+
 .documents-checkbox-accept input {
 	margin-top: -15px;
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	border-radius: 3px;
 	cursor: pointer;
 }
 
 .documents-checkbox-margin input {
-	margin-top: -60px;
-	width: 25px;
-	height: 25px;
+	margin-top: -65px;
+	width: 20px;
+	height: 20px;
 	border-radius: 3px;
 	cursor: pointer;
 }
@@ -392,6 +397,7 @@ input:-webkit-autofill:focus {
 	/* or 162% */
 	margin-left: 35px;
 	color: #2A2A2A;
+	margin-top: -15px;
 }
 
 
@@ -408,18 +414,58 @@ input:-webkit-autofill:focus {
 	font-size: 16px;
 	line-height: 16px;
 	text-align: center;
-	color: #FFFFFF; 
+	color: #FFFFFF;
 	display: inline-block;
-	line-height: 24px; /* Center the text vertically */
-	vertical-align: middle; /* Align the span with other elements if needed */
-	position: relative; /* For absolute positioning of the number */
+	line-height: 24px;
+	/* Center the text vertically */
+	vertical-align: middle;
+	/* Align the span with other elements if needed */
+	position: relative;
+	/* For absolute positioning of the number */
 }
 
 
 .container {
 	display: flex;
 	align-items: center;
-  }
-  .container h2 {
+}
+
+.container h2 {
 	margin-top: -10px;
-  }
+}
+
+.bold-text-span {
+	font-size: 18px;
+	font-weight: 500;
+	color: #2A2A2A;
+}
+
+.orange-text-h2 {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+	text-transform: uppercase;
+	color: #E75B28;
+}
+
+/* unvisited link */
+a:link {
+	color: rgb(22, 147, 232);
+}
+
+/* visited link */
+a:visited {
+	color: rgb(22, 147, 232);
+}
+
+/* mouse over link */
+a:hover {
+	color: #E75B28;
+}
+
+/* selected link */
+a:active {
+	color: rgb(22, 147, 255);
+}
