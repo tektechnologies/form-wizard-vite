@@ -170,12 +170,6 @@ input:-webkit-autofill:focus {
 }
 
 
-
-
-
-
-
-
 .input-wrapper {
 	position: relative;
 }
@@ -402,7 +396,7 @@ input:-webkit-autofill:focus {
 
 .form-2-list-items {
 	width: 88%;
-	margin:0;
+	margin: 0;
 	margin-left: 5px;
 }
 
@@ -417,6 +411,7 @@ input:-webkit-autofill:focus {
 .last-span-item {
 	margin-bottom: -20px;
 }
+
 .ellipse {
 	margin-right: 10px;
 	width: 24px;
@@ -488,6 +483,7 @@ a:active {
 .section-width-paragraphs {
 	width: 88%;
 }
-.section-width-paragraphs p{
+
+.section-width-paragraphs p {
 	margin-bottom: 50px;
 }
