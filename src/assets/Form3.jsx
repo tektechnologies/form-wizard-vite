@@ -23,7 +23,7 @@ const Form3 = () => {
               <span className="ellipse">1</span>
               <h2>A VISITOR REQUEST MUST BE COMPLETED AND APPROVED PRIOR TO YOUR VISIT</h2>
             </div>
-            <p className="document-para">All visitors are required to adhere to Door Access System biosecurity procedures. Violations, intentional or due to negligence, may require Brenneman Pork to terminate services and/or privileges. Please seek immediate guidance in the event biosecurity restrictions are unclear</p>
+            <p className="document-para">All visitors are required to adhere to Door Access System biosecurity procedures. Violations, intentional or due to negligence, may require Brenneman Pork to terminate services and/or privileges. Please seek immediate guidance in the event biosecurity restrictions are unclear.</p>
             <div className="container">
               <span className="ellipse">2</span>
               <h2>DOWNTIME REQUIREMENTS</h2>
@@ -43,9 +43,9 @@ const Form3 = () => {
               SHOWER-OUT: Contractor must follow all shower in and shower out requirements.
               <br /><br />
               <span className="bold-text-span"> FINISHERS:</span> At the Red/Green line, change into site specific clothing or Tyvek. Put on plastic shoe covers
-              or change into site specific boots
+              or change into site specific boots.
               <br /><br />
-              <span className="bold-text-span">FEEDMILL, SHOP, OFFICE, TRUCKWASH:</span> Each location has specific biosecurity requirements depending on the area and reason for visit. Some areas may require a shower in and/or out and/or site specific clothing. As a minimum, placing bootieson shoes <a href="">prior</a> to entering is good practice. Please review site specific biosecurity requirements with BP management prior to your visit
+              <span className="bold-text-span">FEEDMILL, SHOP, OFFICE, TRUCKWASH:</span> Each location has specific biosecurity requirements depending on the area and reason for visit. Some areas may require a shower in and/or out and/or site specific clothing. As a minimum, placing bootieson shoes <a href="">prior</a> to entering is good practice. Please review site specific biosecurity requirements with BP management prior to your visit.
             </p>
             <div className="container">
               <span className="ellipse">4</span>
@@ -68,7 +68,7 @@ const Form3 = () => {
             <p className="document-para">
               No cell phones, cameras, audio/visual equipment, or other electronic devices are permitted inside
               Door Access System. If electronic or recording devices are required, approval must be given, in
-              writing, prior to visit
+              writing, <a href="">prior</a> to visit.
             </p>
             <div className="container">
               <span className="ellipse">6</span>
