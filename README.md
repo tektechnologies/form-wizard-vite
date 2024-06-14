@@ -12,3 +12,4 @@ Currently, two official plugins are available:
 - /*<https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied>*/
 - /*-toggle--------<https://codepen.io/mallendeo/pen/QWKrEL------------->*/
 - <https://cdnjs.com/libraries/meyer-reset>
+- <https://stackoverflow.com/questions/60813961/react-scroll-to-top-on-page-refresh-dont-restore-position/72478740#72478740>

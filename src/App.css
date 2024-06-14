@@ -219,15 +219,20 @@ input:-webkit-autofill:focus {
 	display: none;
 }
 
+
 /* Style the slider */
 .slider {
 	position: relative;
 	display: inline-block;
 	width: 90px;
-	height: 31.5px;
+	height: 30px;
 	background-color: #ccc;
 	border-radius: 34px;
 	transition: background-color 0.3s;
+}
+.position-toggle {
+	margin-left: 20px;
+	margin-bottom: -10px;
 }
 
 /* Style the circle inside the slider */
@@ -238,7 +243,7 @@ input:-webkit-autofill:focus {
 	width: 50px;
 	height: 26px;
 	left: 4px;
-	bottom: 2.5px;
+	bottom: 2px;
 	background-color: #e75b29;
 	color: whitesmoke;
 	border-radius: 34px;
@@ -252,16 +257,17 @@ input:-webkit-autofill:focus {
 	background-color: #3a716c;
 }
 
-.position-toggle {
-	margin-left: 20px;
-	margin-bottom: -10px;
-}
+
 
 /* Move the circle and change text when checked */
 .toggle input:checked+.slider:before {
 	transform: translateX(32px);
 	content: "Yes";
 }
+
+
+
+
 
 /* -------------------------toggle-end-------------------- */
 
@@ -488,3 +494,4 @@ a:active {
 .section-width-paragraphs p {
 	margin-bottom: 50px;
 }
+

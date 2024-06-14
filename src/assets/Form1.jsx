@@ -111,15 +111,26 @@ const Form1 = () => {
               />
               <p>{errors.phoneNumber?.message}</p>
             </div>
+
+           
+            
+            
+          
             <label htmlFor="visitForeignCountry" className="toggle">
               Have you visited a foreign country in the last 7 days?
               <input
+             
                 type="checkbox"
                 id="visitForeignCountry"
                 {...register("visitForeignCountry")}
               />
-              <span className="slider position-toggle"></span>
+              <span  className="slider position-toggle" style={{ marginTop : -10 }} ></span>
             </label>
+
+          
+
+
+
             <hr
               style={{
                 width: "100%",
