@@ -124,7 +124,7 @@ const Form1 = () => {
                 id="visitForeignCountry"
                 {...register("visitForeignCountry")}
               />
-              <span  className="slider position-toggle" style={{ marginTop : -10 }} ></span>
+              <span  className="slider position-toggle" ></span>
             </label>
 
           
